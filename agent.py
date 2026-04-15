@@ -281,10 +281,7 @@ async def run_agent(query: str, config: dict, company: str, engine: str, mode: s
                 if messages:
                     text = _content_to_text(getattr(messages[-1], "content", messages[-1]))
                     match = re.search(r"SIGNIFICANCE_SCORE\D+(\d+)", text)
-                    # Only accept chain-end events that carry a completed research report
-                    # (identified by the mandatory SIGNIFICANCE_SCORE marker).  This
-                    # filters out intermediate events from sub-agents and the supervisor's
-                    # internal routing steps, which do not contain the full report.
+
                     if match:
                         significance_score = int(match.group(1))
                         final_text = text
