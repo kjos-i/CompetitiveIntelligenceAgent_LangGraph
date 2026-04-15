@@ -1,0 +1,14 @@
+{
+  "competitors": [
+    {
+      "name": "Pepsi",
+      "aliases": ["PepsiCo", "Pepsi-Cola"],
+      "special_focus": ""
+    },
+    {
+      "name": "Coca-Cola",
+      "aliases": ["Coke", "The Coca-Cola Company"],
+      "special_focus": ""
+    }
+  ]
+}
