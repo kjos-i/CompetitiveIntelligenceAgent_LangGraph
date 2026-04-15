@@ -1,0 +1,15 @@
+# Python 3.13.1
+altair==6.0.0
+apscheduler==3.11.2
+langchain==1.2.15
+langchain_community==0.4.1
+langchain_core==1.2.29
+langchain_openai==1.1.13
+langchain_tavily==0.2.17
+langgraph_supervisor==0.0.31
+numpy==2.4.4
+pandas==3.0.2
+pydantic==2.13.0
+python-dotenv==1.2.2
+streamlit==1.56.0
+streamlit_autorefresh==1.0.1

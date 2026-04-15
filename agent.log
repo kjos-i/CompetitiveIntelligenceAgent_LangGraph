@@ -1,0 +1,649 @@
+2026-04-15 18:42:38,296 - live_CI_agent - INFO - Long-term memory cache initialized.
+2026-04-15 18:42:39,146 - live_CI_agent - INFO - Loaded system prompt from: C:\Users\kjosi\Langgraph\CompetitiveIntelligenceAgent_LangGraph\system_prompt_agent.txt
+2026-04-15 18:42:39,186 - scheduler_runner - INFO - ============================================================
+2026-04-15 18:42:39,186 - scheduler_runner - INFO - ✓ Scheduler started
+2026-04-15 18:42:39,186 - scheduler_runner - INFO - Automated lookout scheduled: Every 2 minute(s)
+2026-04-15 18:42:39,186 - scheduler_runner - INFO - Press Ctrl+C to stop
+2026-04-15 18:42:39,186 - scheduler_runner - INFO - ============================================================
+2026-04-15 18:44:39,204 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Pepsi, PepsiCo, Pepsi-Cola. Focus: Monitor for new product launches in Scandinavia (Norway, Sweden, Denmark) or brand repositioning in Scandinavia (Norway, Sweden, Denmark).
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS: No prior data.
+2026-04-15 18:44:40,380 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:44:40,385 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 18:44:41,268 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo new product launch Scandinavia April 2026'}
+2026-04-15 18:44:42,830 - live_CI_agent - INFO - Tool brave_search completed in 1.56s
+2026-04-15 18:44:44,000 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo brand repositioning Scandinavia April 2026'}
+2026-04-15 18:44:45,114 - live_CI_agent - INFO - Tool brave_search completed in 1.11s
+2026-04-15 18:44:50,424 - live_CI_agent - INFO - Task complete. Score: 1 | Significant: False
+2026-04-15 18:44:50,430 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Coca-Cola, Coke, The Coca-Cola Company. Focus: Monitor for new product launches in Scandinavia (Norway, Sweden, Denmark) or brand repositioning in Scandinavia (Norway, Sweden, Denmark).
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS: No prior data.
+2026-04-15 18:44:51,153 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:44:51,157 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.01s
+2026-04-15 18:44:52,334 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'Coca-Cola new product launch Scandinavia April 2026'}
+2026-04-15 18:44:53,578 - live_CI_agent - INFO - Tool brave_search completed in 1.24s
+2026-04-15 18:44:58,194 - live_CI_agent - INFO - Task complete. Score: 1 | Significant: False
+2026-04-15 18:50:58,064 - live_CI_agent - INFO - Long-term memory cache initialized.
+2026-04-15 18:50:58,891 - live_CI_agent - INFO - Loaded system prompt from: C:\Users\kjosi\Langgraph\CompetitiveIntelligenceAgent_LangGraph\system_prompt_agent.txt
+2026-04-15 18:50:58,908 - scheduler_runner - INFO - ============================================================
+2026-04-15 18:50:58,908 - scheduler_runner - INFO - ✓ Scheduler started
+2026-04-15 18:50:58,908 - scheduler_runner - INFO - Automated lookout scheduled: Every 2 minute(s)
+2026-04-15 18:50:58,908 - scheduler_runner - INFO - Press Ctrl+C to stop
+2026-04-15 18:50:58,908 - scheduler_runner - INFO - ============================================================
+2026-04-15 18:50:58,910 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Pepsi, PepsiCo, Pepsi-Cola. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 1 entries, oldest first):
+1. **Executive Summary:** There are no new developments regarding PepsiCo's product launches or brand repositioning in Scandinavia (Norway, Sweden, Denmark) as of April 2026. The current information does not indicate any specific activities in these regions.
+
+2. **Key Findings:** No new facts were found regarding PepsiCo's activities in Scandinavia.
+
+3. **Competitive Implication:** The absence of new product launches or brand repositioning in Scandinavia suggests that PepsiCo may be maintaining its existing market strategy in the region without significant changes or innovations at this time.
+
+4. **Sources:** No URLs available due to lack of specific findings.
+
+5. **Significance Score Reasoning:** This is an existing development because there are no new events or changes reported in PepsiCo's strategy or product offerings in Scandinavia. The lack of new information results in a significance score of 1.
+
+SIGNIFICANCE_SCORE: 1
+2026-04-15 18:51:00,283 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:51:00,286 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 18:51:01,866 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo new product launch Europe April 2026'}
+2026-04-15 18:51:02,931 - live_CI_agent - INFO - Tool brave_search completed in 1.06s
+2026-04-15 18:51:03,909 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo brand repositioning Europe April 2026'}
+2026-04-15 18:51:04,909 - live_CI_agent - INFO - Tool brave_search completed in 1.00s
+2026-04-15 18:51:12,136 - live_CI_agent - INFO - Task complete. Score: 2 | Significant: False
+2026-04-15 18:51:12,138 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Coca-Cola, Coke, The Coca-Cola Company. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 1 entries, oldest first):
+1. Executive Summary: No new product launches or brand repositioning by Coca-Cola in Scandinavia (Norway, Sweden, Denmark) have been identified as of April 2026.
+
+2. Key Findings: 
+   - No specific updates on Coca-Cola's activities in Scandinavia were found in the recent search.
+
+3. Competitive Implication: The absence of new product launches or brand repositioning in Scandinavia suggests that Coca-Cola may be maintaining its current market strategy in the region. Competitors might find this an opportunity to innovate or reposition their brands to capture market share.
+
+4. Sources: No URLs available due to lack of specific findings.
+
+5. Significance Score Reasoning: This is an existing development because there are no new events or changes in Coca-Cola's strategy in Scandinavia. The lack of new information results in a score of 1.
+
+SIGNIFICANCE_SCORE: 1
+2026-04-15 18:51:12,896 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:51:12,897 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 18:51:13,861 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'Coca-Cola new product launch Europe April 2026'}
+2026-04-15 18:51:14,944 - live_CI_agent - INFO - Tool brave_search completed in 1.08s
+2026-04-15 18:51:31,925 - live_CI_agent - INFO - Task complete. Score: 7 | Significant: True
+2026-04-15 18:51:39,262 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'tavily_analyst' only. HUMAN APPROVED DEEP SEARCH. TODAY: April 15, 2026. The initial Brave scan for Coca-Cola flagged significant changes. Brave Scout Summary:
+1. **Executive Summary**: Coca-Cola has introduced new product flavors and launched a strategic campaign in Europe, marking a shift from the previous status of no new activities in Scandinavia.
+
+2. **Key Findings**:
+   - Coca-Cola launched the 'And a Coke' campaign across various platforms, emphasizing its role in dining experiences (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - A new limited-edition flavor, Fanta Crimson Sour Cherry, was introduced as part of a collaboration with Xbox (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   - Coca-Cola expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry (April 2026). [Source](https://www.coca-colacompany.com/)
+
+3. **Competitive Implication**: These new product launches and campaigns suggest Coca-Cola is actively seeking to enhance its market presence and consumer engagement in Europe. Competitors may need to respond with their own innovations or marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   3. [Coca-Cola Company](https://www.coca-colacompany.com/)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7 Use 'tavily_analyst' to provide a granular breakdown of initial Brave scan via primary sources.
+2026-04-15 18:51:40,040 - live_CI_agent - DEBUG - Tool transfer_to_tavily_analyst input: {}
+2026-04-15 18:51:40,041 - live_CI_agent - INFO - Tool transfer_to_tavily_analyst completed in 0.00s
+2026-04-15 18:51:42,407 - live_CI_agent - DEBUG - Tool tavily_search input: {'query': "Coca-Cola 'And a Coke' campaign Europe April 2026", 'include_domains': ['bakeryandsnacks.com'], 'search_depth': 'advanced', 'time_range': 'month'}
+2026-04-15 18:51:42,408 - live_CI_agent - DEBUG - Tool tavily_search input: {'query': 'Fanta Crimson Sour Cherry Xbox collaboration April 2026', 'include_domains': ['aol.com'], 'search_depth': 'advanced', 'time_range': 'month'}
+2026-04-15 18:51:42,408 - live_CI_agent - DEBUG - Tool tavily_search input: {'query': 'Coca-Cola Cherry Float and Diet Coke Cherry April 2026', 'include_domains': ['coca-colacompany.com'], 'search_depth': 'advanced', 'time_range': 'month'}
+2026-04-15 18:51:45,270 - live_CI_agent - INFO - Tool tavily_search completed in 2.86s
+2026-04-15 18:51:45,541 - live_CI_agent - INFO - Tool tavily_search completed in 3.13s
+2026-04-15 18:51:46,155 - live_CI_agent - INFO - Tool tavily_search completed in 3.75s
+2026-04-15 18:51:48,251 - live_CI_agent - DEBUG - Tool tavily_search input: {'query': "Coca-Cola 'And a Coke' campaign Europe April 2026", 'search_depth': 'advanced', 'time_range': 'month'}
+2026-04-15 18:51:48,252 - live_CI_agent - DEBUG - Tool tavily_search input: {'query': 'Fanta Crimson Sour Cherry Xbox collaboration April 2026', 'search_depth': 'advanced', 'time_range': 'month'}
+2026-04-15 18:51:48,252 - live_CI_agent - DEBUG - Tool tavily_search input: {'query': 'Coca-Cola Cherry Float and Diet Coke Cherry April 2026', 'search_depth': 'advanced', 'time_range': 'month'}
+2026-04-15 18:51:51,332 - live_CI_agent - INFO - Tool tavily_search completed in 3.08s
+2026-04-15 18:51:51,403 - live_CI_agent - INFO - Tool tavily_search completed in 3.15s
+2026-04-15 18:51:52,457 - live_CI_agent - INFO - Tool tavily_search completed in 4.21s
+2026-04-15 18:52:02,216 - live_CI_agent - INFO - Task complete. Score: 7 | Significant: True
+2026-04-15 18:52:58,917 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Pepsi, PepsiCo, Pepsi-Cola. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 2 entries, oldest first):
+1. **Executive Summary:** There are no new developments regarding PepsiCo's product launches or brand repositioning in Scandinavia (Norway, Sweden, Denmark) as of April 2026. The current information does not indicate any specific activities in these regions.
+
+2. **Key Findings:** No new facts were found regarding PepsiCo's activities in Scandinavia.
+
+3. **Competitive Implication:** The absence of new product launches or brand repositioning in Scandinavia suggests that PepsiCo may be maintaining its existing market strategy in the region without significant changes or innovations at this time.
+
+4. **Sources:** No URLs available due to lack of specific findings.
+
+5. **Significance Score Reasoning:** This is an existing development because there are no new events or changes reported in PepsiCo's strategy or product offerings in Scandinavia. The lack of new information results in a significance score of 1.
+
+SIGNIFICANCE_SCORE: 1
+1. **Executive Summary:** PepsiCo has not announced any new product launches or brand repositioning specifically in Europe. However, recent strategic initiatives in other regions, such as the U.S., could potentially influence future activities in Europe.
+
+2. **Key Findings:**
+   - PepsiCo launched new exclusive flavors under the "DRIPS by Pepsi" brand at KFC Saucy! locations in the U.S., reflecting ongoing innovation in beverage offerings (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - PepsiCo is repositioning its biggest brands to gain more shelf space, including price cuts on core snack brands like Lay's and Doritos, primarily in North America (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - A comprehensive portfolio refresh is underway, involving global brands such as Lay’s, Tostitos, Gatorade, and Quaker, which could impact European markets (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+
+3. **Competitive Implication:** While there are no immediate changes in Europe, PepsiCo's strategic initiatives in other regions may signal potential future shifts in product offerings and brand positioning in the European market.
+
+4. **Sources:**
+   1. https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter
+
+5. **Significance Score Reasoning:** This is an existing development because the activities reported are not specific to Europe and do not represent new product launches or brand repositioning in the region. The significance score remains low due to the lack of direct impact on the European market.
+
+SIGNIFICANCE_SCORE: 2
+2026-04-15 18:53:00,028 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:53:00,031 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 18:53:00,843 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo new product launches Europe April 2026'}
+2026-04-15 18:53:01,888 - live_CI_agent - INFO - Tool brave_search completed in 1.05s
+2026-04-15 18:53:06,287 - live_CI_agent - INFO - Task complete. Score: 1 | Significant: False
+2026-04-15 18:53:06,291 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Coca-Cola, Coke, The Coca-Cola Company. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 3 entries, oldest first):
+1. Executive Summary: No new product launches or brand repositioning by Coca-Cola in Scandinavia (Norway, Sweden, Denmark) have been identified as of April 2026.
+
+2. Key Findings: 
+   - No specific updates on Coca-Cola's activities in Scandinavia were found in the recent search.
+
+3. Competitive Implication: The absence of new product launches or brand repositioning in Scandinavia suggests that Coca-Cola may be maintaining its current market strategy in the region. Competitors might find this an opportunity to innovate or reposition their brands to capture market share.
+
+4. Sources: No URLs available due to lack of specific findings.
+
+5. Significance Score Reasoning: This is an existing development because there are no new events or changes in Coca-Cola's strategy in Scandinavia. The lack of new information results in a score of 1.
+
+SIGNIFICANCE_SCORE: 1
+1. **Executive Summary**: Coca-Cola has introduced new product flavors and launched a strategic campaign in Europe, marking a shift from the previous status of no new activities in Scandinavia.
+
+2. **Key Findings**:
+   - Coca-Cola launched the 'And a Coke' campaign across various platforms, emphasizing its role in dining experiences (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - A new limited-edition flavor, Fanta Crimson Sour Cherry, was introduced as part of a collaboration with Xbox (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   - Coca-Cola expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry (April 2026). [Source](https://www.coca-colacompany.com/)
+
+3. **Competitive Implication**: These new product launches and campaigns suggest Coca-Cola is actively seeking to enhance its market presence and consumer engagement in Europe. Competitors may need to respond with their own innovations or marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   3. [Coca-Cola Company](https://www.coca-colacompany.com/)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7
+1. **Executive Summary**: Coca-Cola has launched a strategic campaign and introduced new product flavors in Europe, marking a significant shift from previous inactivity in Scandinavia. The campaign includes collaborations with major brands and events, such as the FIFA World Cup and Xbox.
+
+2. **Key Findings**:
+   - Coca-Cola's 'And a Coke' campaign in Europe includes immersive experiences and collaborations, such as a global World Cup Trophy Tour and a custom sticker collection with Panini, targeting over 320 million people in more than 30 markets (April 2026). [Source](https://www.decisionmarketing.co.uk/reviews/coca-cola-uncanned-emotions-not-quite-the-real-thing)
+   - Fanta introduced a limited-edition flavor, Crimson Sour Cherry, as part of its collaboration with Xbox for the 25th anniversary, available in special edition cans and bottles (April 14, 2026). [Source](https://www.theimpulsivebuy.com/wordpress/2026/04/14/spotted-fanta-xbox-25th-anniversary-crimson-sour-cherry/)
+   - Coca-Cola expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry, featuring new flavor combinations (April 2026). [Source](https://www.tastingtable.com/2142107/best-worst-2026-soda-flavors/)
+
+3. **Competitive Implication**: Coca-Cola's new product launches and strategic campaigns in Europe suggest a proactive approach to enhancing market presence and consumer engagement. Competitors may need to innovate or adjust their marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [DecisionMarketing](https://www.decisionmarketing.co.uk/reviews/coca-cola-uncanned-emotions-not-quite-the-real-thing)
+   2. [The Impulsive Buy](https://www.theimpulsivebuy.com/wordpress/2026/04/14/spotted-fanta-xbox-25th-anniversary-crimson-sour-cherry/)
+   3. [Tasting Table](https://www.tastingtable.com/2142107/best-worst-2026-soda-flavors/)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7
+2026-04-15 18:53:07,071 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:53:07,074 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 18:53:07,988 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'Coca-Cola new product launch Europe April 2026'}
+2026-04-15 18:53:08,704 - live_CI_agent - INFO - Tool brave_search completed in 0.72s
+2026-04-15 18:53:16,620 - live_CI_agent - INFO - Task complete. Score: 7 | Significant: True
+2026-04-15 18:53:24,623 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'tavily_analyst' only. HUMAN APPROVED DEEP SEARCH. TODAY: April 15, 2026. The initial Brave scan for Coca-Cola flagged significant changes. Brave Scout Summary:
+1. **Executive Summary**: Coca-Cola has launched new product flavors and a strategic campaign in Europe, marking a shift from the previous status of no new activities in Scandinavia.
+
+2. **Key Findings**:
+   - Coca-Cola launched the 'And a Coke' campaign across various platforms, emphasizing its role in dining experiences (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - A new limited-edition flavor, Fanta Crimson Sour Cherry, was introduced as part of a collaboration with Xbox (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   - Coca-Cola expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry (April 2026). [Source](https://www.coca-colacompany.com/)
+
+3. **Competitive Implication**: These new product launches and campaigns suggest Coca-Cola is actively seeking to enhance its market presence and consumer engagement in Europe. Competitors may need to respond with their own innovations or marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   3. [Coca-Cola Company](https://www.coca-colacompany.com/)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7 Use 'tavily_analyst' to provide a granular breakdown of initial Brave scan via primary sources.
+2026-04-15 18:53:25,364 - live_CI_agent - DEBUG - Tool transfer_to_tavily_analyst input: {}
+2026-04-15 18:53:25,365 - live_CI_agent - INFO - Tool transfer_to_tavily_analyst completed in 0.00s
+2026-04-15 18:53:27,782 - live_CI_agent - DEBUG - Tool tavily_search input: {'query': "Coca-Cola 'And a Coke' campaign Europe April 2026", 'include_domains': ['bakeryandsnacks.com'], 'search_depth': 'advanced', 'time_range': 'month'}
+2026-04-15 18:53:27,783 - live_CI_agent - DEBUG - Tool tavily_search input: {'query': 'Fanta Crimson Sour Cherry Xbox collaboration April 2026', 'include_domains': ['aol.com'], 'search_depth': 'advanced', 'time_range': 'month'}
+2026-04-15 18:53:27,783 - live_CI_agent - DEBUG - Tool tavily_search input: {'query': 'Coca-Cola Cherry Float Diet Coke Cherry April 2026', 'include_domains': ['coca-colacompany.com'], 'search_depth': 'advanced', 'time_range': 'month'}
+2026-04-15 18:53:31,005 - live_CI_agent - INFO - Tool tavily_search completed in 3.22s
+2026-04-15 18:53:31,689 - live_CI_agent - INFO - Tool tavily_search completed in 3.91s
+2026-04-15 18:53:32,692 - live_CI_agent - INFO - Tool tavily_search completed in 4.91s
+2026-04-15 18:53:42,699 - live_CI_agent - INFO - Task complete. Score: 7 | Significant: True
+2026-04-15 18:54:58,914 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Pepsi, PepsiCo, Pepsi-Cola. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 3 entries, oldest first):
+1. **Executive Summary:** There are no new developments regarding PepsiCo's product launches or brand repositioning in Scandinavia (Norway, Sweden, Denmark) as of April 2026. The current information does not indicate any specific activities in these regions.
+
+2. **Key Findings:** No new facts were found regarding PepsiCo's activities in Scandinavia.
+
+3. **Competitive Implication:** The absence of new product launches or brand repositioning in Scandinavia suggests that PepsiCo may be maintaining its existing market strategy in the region without significant changes or innovations at this time.
+
+4. **Sources:** No URLs available due to lack of specific findings.
+
+5. **Significance Score Reasoning:** This is an existing development because there are no new events or changes reported in PepsiCo's strategy or product offerings in Scandinavia. The lack of new information results in a significance score of 1.
+
+SIGNIFICANCE_SCORE: 1
+1. **Executive Summary:** PepsiCo has not announced any new product launches or brand repositioning specifically in Europe. However, recent strategic initiatives in other regions, such as the U.S., could potentially influence future activities in Europe.
+
+2. **Key Findings:**
+   - PepsiCo launched new exclusive flavors under the "DRIPS by Pepsi" brand at KFC Saucy! locations in the U.S., reflecting ongoing innovation in beverage offerings (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - PepsiCo is repositioning its biggest brands to gain more shelf space, including price cuts on core snack brands like Lay's and Doritos, primarily in North America (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - A comprehensive portfolio refresh is underway, involving global brands such as Lay’s, Tostitos, Gatorade, and Quaker, which could impact European markets (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+
+3. **Competitive Implication:** While there are no immediate changes in Europe, PepsiCo's strategic initiatives in other regions may signal potential future shifts in product offerings and brand positioning in the European market.
+
+4. **Sources:**
+   1. https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter
+
+5. **Significance Score Reasoning:** This is an existing development because the activities reported are not specific to Europe and do not represent new product launches or brand repositioning in the region. The significance score remains low due to the lack of direct impact on the European market.
+
+SIGNIFICANCE_SCORE: 2
+1. **Executive Summary:** There are no new developments regarding PepsiCo's product launches or brand repositioning in Europe as of April 2026. The current information does not indicate any specific activities in these regions.
+
+2. **Key Findings:** No new facts were found regarding PepsiCo's activities in Europe.
+
+3. **Competitive Implication:** The absence of new product launches or brand repositioning in Europe suggests that PepsiCo may be maintaining its existing market strategy in the region without significant changes or innovations at this time.
+
+4. **Sources:** No URLs available due to lack of specific findings.
+
+5. **Significance Score Reasoning:** This is an existing development because there are no new events or changes reported in PepsiCo's strategy or product offerings in Europe. The lack of new information results in a significance score of 1.
+
+SIGNIFICANCE_SCORE: 1
+2026-04-15 18:54:59,680 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:54:59,683 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 18:55:00,631 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo new product launches Europe April 2026'}
+2026-04-15 18:55:01,439 - live_CI_agent - INFO - Tool brave_search completed in 0.81s
+2026-04-15 18:55:02,255 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo brand repositioning Europe April 2026'}
+2026-04-15 18:55:03,027 - live_CI_agent - INFO - Tool brave_search completed in 0.77s
+2026-04-15 18:55:17,321 - live_CI_agent - INFO - Task complete. Score: 2 | Significant: False
+2026-04-15 18:55:17,323 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Coca-Cola, Coke, The Coca-Cola Company. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 3 entries, oldest first):
+1. **Executive Summary**: Coca-Cola has launched a strategic campaign and introduced new product flavors in Europe, marking a significant shift from previous inactivity in Scandinavia. The campaign includes collaborations with major brands and events, such as the FIFA World Cup and Xbox.
+
+2. **Key Findings**:
+   - Coca-Cola's 'And a Coke' campaign in Europe includes immersive experiences and collaborations, such as a global World Cup Trophy Tour and a custom sticker collection with Panini, targeting over 320 million people in more than 30 markets (April 2026). [Source](https://www.decisionmarketing.co.uk/reviews/coca-cola-uncanned-emotions-not-quite-the-real-thing)
+   - Fanta introduced a limited-edition flavor, Crimson Sour Cherry, as part of its collaboration with Xbox for the 25th anniversary, available in special edition cans and bottles (April 14, 2026). [Source](https://www.theimpulsivebuy.com/wordpress/2026/04/14/spotted-fanta-xbox-25th-anniversary-crimson-sour-cherry/)
+   - Coca-Cola expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry, featuring new flavor combinations (April 2026). [Source](https://www.tastingtable.com/2142107/best-worst-2026-soda-flavors/)
+
+3. **Competitive Implication**: Coca-Cola's new product launches and strategic campaigns in Europe suggest a proactive approach to enhancing market presence and consumer engagement. Competitors may need to innovate or adjust their marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [DecisionMarketing](https://www.decisionmarketing.co.uk/reviews/coca-cola-uncanned-emotions-not-quite-the-real-thing)
+   2. [The Impulsive Buy](https://www.theimpulsivebuy.com/wordpress/2026/04/14/spotted-fanta-xbox-25th-anniversary-crimson-sour-cherry/)
+   3. [Tasting Table](https://www.tastingtable.com/2142107/best-worst-2026-soda-flavors/)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7
+1. **Executive Summary**: Coca-Cola has launched new product flavors and a strategic campaign in Europe, marking a shift from the previous status of no new activities in Scandinavia.
+
+2. **Key Findings**:
+   - Coca-Cola launched the 'And a Coke' campaign across various platforms, emphasizing its role in dining experiences (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - A new limited-edition flavor, Fanta Crimson Sour Cherry, was introduced as part of a collaboration with Xbox (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   - Coca-Cola expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry (April 2026). [Source](https://www.coca-colacompany.com/)
+
+3. **Competitive Implication**: These new product launches and campaigns suggest Coca-Cola is actively seeking to enhance its market presence and consumer engagement in Europe. Competitors may need to respond with their own innovations or marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   3. [Coca-Cola Company](https://www.coca-colacompany.com/)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7
+1. **Executive Summary**: Coca-Cola has launched a strategic campaign and new product flavors in Europe, marking a significant shift from previous inactivity in Scandinavia. The 'And a Coke' campaign and Fanta's collaboration with Xbox are key highlights.
+
+2. **Key Findings**:
+   - Coca-Cola's 'And a Coke' campaign emphasizes its role in dining experiences, partnering with major QSR chains and utilizing platforms like Uber Eats and DoorDash (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - Fanta introduced a limited-edition flavor, Fanta Crimson Sour Cherry, in collaboration with Xbox, featuring special-edition packaging and digital rewards (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+
+3. **Competitive Implication**: Coca-Cola's new campaigns and product launches in Europe suggest a strategic push to enhance market presence and consumer engagement. Competitors may need to innovate or adjust marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7
+2026-04-15 18:55:18,108 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:55:18,110 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 18:55:19,223 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'Coca-Cola new product launches Europe April 2026'}
+2026-04-15 18:55:20,289 - live_CI_agent - INFO - Tool brave_search completed in 1.07s
+2026-04-15 18:55:31,243 - live_CI_agent - INFO - Task complete. Score: 5 | Significant: False
+2026-04-15 18:56:58,918 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Pepsi, PepsiCo, Pepsi-Cola. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 3 entries, oldest first):
+1. **Executive Summary:** PepsiCo has not announced any new product launches or brand repositioning specifically in Europe. However, recent strategic initiatives in other regions, such as the U.S., could potentially influence future activities in Europe.
+
+2. **Key Findings:**
+   - PepsiCo launched new exclusive flavors under the "DRIPS by Pepsi" brand at KFC Saucy! locations in the U.S., reflecting ongoing innovation in beverage offerings (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - PepsiCo is repositioning its biggest brands to gain more shelf space, including price cuts on core snack brands like Lay's and Doritos, primarily in North America (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - A comprehensive portfolio refresh is underway, involving global brands such as Lay’s, Tostitos, Gatorade, and Quaker, which could impact European markets (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+
+3. **Competitive Implication:** While there are no immediate changes in Europe, PepsiCo's strategic initiatives in other regions may signal potential future shifts in product offerings and brand positioning in the European market.
+
+4. **Sources:**
+   1. https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter
+
+5. **Significance Score Reasoning:** This is an existing development because the activities reported are not specific to Europe and do not represent new product launches or brand repositioning in the region. The significance score remains low due to the lack of direct impact on the European market.
+
+SIGNIFICANCE_SCORE: 2
+1. **Executive Summary:** There are no new developments regarding PepsiCo's product launches or brand repositioning in Europe as of April 2026. The current information does not indicate any specific activities in these regions.
+
+2. **Key Findings:** No new facts were found regarding PepsiCo's activities in Europe.
+
+3. **Competitive Implication:** The absence of new product launches or brand repositioning in Europe suggests that PepsiCo may be maintaining its existing market strategy in the region without significant changes or innovations at this time.
+
+4. **Sources:** No URLs available due to lack of specific findings.
+
+5. **Significance Score Reasoning:** This is an existing development because there are no new events or changes reported in PepsiCo's strategy or product offerings in Europe. The lack of new information results in a significance score of 1.
+
+SIGNIFICANCE_SCORE: 1
+1. **Executive Summary:** PepsiCo has not announced any new product launches or brand repositioning specifically in Europe. However, strategic initiatives such as brand repositioning and portfolio refreshes in other regions could potentially influence future activities in Europe.
+
+2. **Key Findings:**
+   - PepsiCo is repositioning its biggest brands to gain more shelf space, including price cuts on core snack brands like Lay's and Doritos, primarily in North America (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - A comprehensive portfolio refresh is underway, involving global brands such as Lay’s, Tostitos, Gatorade, and Quaker, which could impact European markets (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - PepsiCo is entering a new strategic phase with operational restructuring, including job cuts in Spain, which may affect European operations (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+
+3. **Competitive Implication:** While there are no immediate changes in Europe, PepsiCo's strategic initiatives in other regions may signal potential future shifts in product offerings and brand positioning in the European market.
+
+4. **Sources:**
+   1. https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter
+
+5. **Significance Score Reasoning:** This is an existing development because the activities reported are not specific to Europe and do not represent new product launches or brand repositioning in the region. The significance score remains low due to the lack of direct impact on the European market.
+
+SIGNIFICANCE_SCORE: 2
+2026-04-15 18:56:59,969 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:56:59,970 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 18:57:00,986 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo new product launches Europe April 2026'}
+2026-04-15 18:57:01,739 - live_CI_agent - INFO - Tool brave_search completed in 0.75s
+2026-04-15 18:57:05,934 - live_CI_agent - INFO - Task complete. Score: 1 | Significant: False
+2026-04-15 18:57:05,939 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Coca-Cola, Coke, The Coca-Cola Company. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 3 entries, oldest first):
+1. **Executive Summary**: Coca-Cola has launched new product flavors and a strategic campaign in Europe, marking a shift from the previous status of no new activities in Scandinavia.
+
+2. **Key Findings**:
+   - Coca-Cola launched the 'And a Coke' campaign across various platforms, emphasizing its role in dining experiences (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - A new limited-edition flavor, Fanta Crimson Sour Cherry, was introduced as part of a collaboration with Xbox (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   - Coca-Cola expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry (April 2026). [Source](https://www.coca-colacompany.com/)
+
+3. **Competitive Implication**: These new product launches and campaigns suggest Coca-Cola is actively seeking to enhance its market presence and consumer engagement in Europe. Competitors may need to respond with their own innovations or marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   3. [Coca-Cola Company](https://www.coca-colacompany.com/)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7
+1. **Executive Summary**: Coca-Cola has launched a strategic campaign and new product flavors in Europe, marking a significant shift from previous inactivity in Scandinavia. The 'And a Coke' campaign and Fanta's collaboration with Xbox are key highlights.
+
+2. **Key Findings**:
+   - Coca-Cola's 'And a Coke' campaign emphasizes its role in dining experiences, partnering with major QSR chains and utilizing platforms like Uber Eats and DoorDash (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - Fanta introduced a limited-edition flavor, Fanta Crimson Sour Cherry, in collaboration with Xbox, featuring special-edition packaging and digital rewards (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+
+3. **Competitive Implication**: Coca-Cola's new campaigns and product launches in Europe suggest a strategic push to enhance market presence and consumer engagement. Competitors may need to innovate or adjust marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7
+1. **Executive Summary**: Coca-Cola has introduced new product flavors and strategic collaborations in Europe, including a new Sprite flavor and a FIFA World Cup campaign, marking a continuation of their active market engagement.
+
+2. **Key Findings**:
+   - Coca-Cola has expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry, continuing its product refresh strategy (April 2026). [Source](https://www.coca-colacompany.com/)
+   - The company is engaging European markets with a FIFA World Cup 2026 campaign, including a collaboration with Panini for a custom sticker collection available in May (April 2026). [Source](https://lbbonline.com/news/Coca-Cola-Raw-Passion-FIFA-World-Cup-2026)
+   - A new limited-time flavor, Sprite Loco Lime, has been introduced in collaboration with Wingstop, available at select locations (April 2026). [Source](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+3. **Competitive Implication**: Coca-Cola's continued product innovation and strategic collaborations in Europe suggest a robust approach to maintaining and enhancing market presence. Competitors may need to consider similar innovative strategies to keep pace.
+
+4. **Sources**:
+   1. [Coca-Cola Company](https://www.coca-colacompany.com/)
+   2. [LBB Online](https://lbbonline.com/news/Coca-Cola-Raw-Passion-FIFA-World-Cup-2026)
+   3. [Parade](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+5. **Significance Score Reasoning**: This is an existing development because the new product launches and collaborations are part of Coca-Cola's ongoing strategy to enhance its market presence in Europe. The activities represent incremental steps in their strategic plan rather than a fundamental shift.
+
+SIGNIFICANCE_SCORE: 5
+2026-04-15 18:57:06,728 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:57:06,735 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.01s
+2026-04-15 18:57:07,696 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'Coca-Cola new product launch Europe April 2026'}
+2026-04-15 18:57:08,455 - live_CI_agent - INFO - Tool brave_search completed in 0.76s
+2026-04-15 18:57:16,279 - live_CI_agent - INFO - Task complete. Score: 5 | Significant: False
+2026-04-15 18:58:58,917 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Pepsi, PepsiCo, Pepsi-Cola. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 3 entries, oldest first):
+1. **Executive Summary:** There are no new developments regarding PepsiCo's product launches or brand repositioning in Europe as of April 2026. The current information does not indicate any specific activities in these regions.
+
+2. **Key Findings:** No new facts were found regarding PepsiCo's activities in Europe.
+
+3. **Competitive Implication:** The absence of new product launches or brand repositioning in Europe suggests that PepsiCo may be maintaining its existing market strategy in the region without significant changes or innovations at this time.
+
+4. **Sources:** No URLs available due to lack of specific findings.
+
+5. **Significance Score Reasoning:** This is an existing development because there are no new events or changes reported in PepsiCo's strategy or product offerings in Europe. The lack of new information results in a significance score of 1.
+
+SIGNIFICANCE_SCORE: 1
+1. **Executive Summary:** PepsiCo has not announced any new product launches or brand repositioning specifically in Europe. However, strategic initiatives such as brand repositioning and portfolio refreshes in other regions could potentially influence future activities in Europe.
+
+2. **Key Findings:**
+   - PepsiCo is repositioning its biggest brands to gain more shelf space, including price cuts on core snack brands like Lay's and Doritos, primarily in North America (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - A comprehensive portfolio refresh is underway, involving global brands such as Lay’s, Tostitos, Gatorade, and Quaker, which could impact European markets (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - PepsiCo is entering a new strategic phase with operational restructuring, including job cuts in Spain, which may affect European operations (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+
+3. **Competitive Implication:** While there are no immediate changes in Europe, PepsiCo's strategic initiatives in other regions may signal potential future shifts in product offerings and brand positioning in the European market.
+
+4. **Sources:**
+   1. https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter
+
+5. **Significance Score Reasoning:** This is an existing development because the activities reported are not specific to Europe and do not represent new product launches or brand repositioning in the region. The significance score remains low due to the lack of direct impact on the European market.
+
+SIGNIFICANCE_SCORE: 2
+1. **Executive Summary:** There are no new developments regarding PepsiCo's product launches or brand repositioning in Europe as of April 2026. The current information does not indicate any specific activities in these regions.
+
+2. **Key Findings:** No new facts were found regarding PepsiCo's activities in Europe.
+
+3. **Competitive Implication:** The absence of new product launches or brand repositioning in Europe suggests that PepsiCo may be maintaining its existing market strategy in the region without significant changes or innovations at this time.
+
+4. **Sources:** No URLs available due to lack of specific findings.
+
+5. **Significance Score Reasoning:** This is an existing development because there are no new events or changes reported in PepsiCo's strategy or product offerings in Europe. The lack of new information results in a significance score of 1.
+
+SIGNIFICANCE_SCORE: 1
+2026-04-15 18:58:59,797 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:58:59,799 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 18:59:00,758 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo new product launch Europe April 2026'}
+2026-04-15 18:59:01,543 - live_CI_agent - INFO - Tool brave_search completed in 0.79s
+2026-04-15 18:59:02,624 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo brand repositioning Europe April 2026'}
+2026-04-15 18:59:03,379 - live_CI_agent - INFO - Tool brave_search completed in 0.76s
+2026-04-15 18:59:10,829 - live_CI_agent - INFO - Task complete. Score: 2 | Significant: False
+2026-04-15 18:59:10,836 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Coca-Cola, Coke, The Coca-Cola Company. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 3 entries, oldest first):
+1. **Executive Summary**: Coca-Cola has launched a strategic campaign and new product flavors in Europe, marking a significant shift from previous inactivity in Scandinavia. The 'And a Coke' campaign and Fanta's collaboration with Xbox are key highlights.
+
+2. **Key Findings**:
+   - Coca-Cola's 'And a Coke' campaign emphasizes its role in dining experiences, partnering with major QSR chains and utilizing platforms like Uber Eats and DoorDash (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - Fanta introduced a limited-edition flavor, Fanta Crimson Sour Cherry, in collaboration with Xbox, featuring special-edition packaging and digital rewards (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+
+3. **Competitive Implication**: Coca-Cola's new campaigns and product launches in Europe suggest a strategic push to enhance market presence and consumer engagement. Competitors may need to innovate or adjust marketing strategies to maintain market share.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+
+5. **Significance Score Reasoning**: This is a new development because Coca-Cola has launched new products and a campaign in Europe, which were not previously reported. The introduction of new flavors and strategic marketing efforts represent a significant change from the previous status of no new activities in Scandinavia.
+
+SIGNIFICANCE_SCORE: 7
+1. **Executive Summary**: Coca-Cola has introduced new product flavors and strategic collaborations in Europe, including a new Sprite flavor and a FIFA World Cup campaign, marking a continuation of their active market engagement.
+
+2. **Key Findings**:
+   - Coca-Cola has expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry, continuing its product refresh strategy (April 2026). [Source](https://www.coca-colacompany.com/)
+   - The company is engaging European markets with a FIFA World Cup 2026 campaign, including a collaboration with Panini for a custom sticker collection available in May (April 2026). [Source](https://lbbonline.com/news/Coca-Cola-Raw-Passion-FIFA-World-Cup-2026)
+   - A new limited-time flavor, Sprite Loco Lime, has been introduced in collaboration with Wingstop, available at select locations (April 2026). [Source](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+3. **Competitive Implication**: Coca-Cola's continued product innovation and strategic collaborations in Europe suggest a robust approach to maintaining and enhancing market presence. Competitors may need to consider similar innovative strategies to keep pace.
+
+4. **Sources**:
+   1. [Coca-Cola Company](https://www.coca-colacompany.com/)
+   2. [LBB Online](https://lbbonline.com/news/Coca-Cola-Raw-Passion-FIFA-World-Cup-2026)
+   3. [Parade](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+5. **Significance Score Reasoning**: This is an existing development because the new product launches and collaborations are part of Coca-Cola's ongoing strategy to enhance its market presence in Europe. The activities represent incremental steps in their strategic plan rather than a fundamental shift.
+
+SIGNIFICANCE_SCORE: 5
+1. **Executive Summary**: Coca-Cola has continued its strategic push in Europe with new product launches and campaigns, including a new Sprite flavor and a FIFA World Cup campaign, marking ongoing market engagement.
+
+2. **Key Findings**:
+   - Coca-Cola launched the 'And a Coke' campaign across various platforms, emphasizing its role in dining experiences (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - A new limited-edition flavor, Fanta Crimson Sour Cherry, was introduced as part of a collaboration with Xbox (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   - Coca-Cola expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry (April 2026). [Source](https://www.coca-colacompany.com/)
+   - A new limited-time flavor, Sprite Loco Lime, has been introduced in collaboration with Wingstop, available at select locations (April 2026). [Source](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+3. **Competitive Implication**: Coca-Cola's continued product innovation and strategic collaborations in Europe suggest a robust approach to maintaining and enhancing market presence. Competitors may need to consider similar innovative strategies to keep pace.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   3. [Coca-Cola Company](https://www.coca-colacompany.com/)
+   4. [Parade](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+5. **Significance Score Reasoning**: This is an existing development because the new product launches and collaborations are part of Coca-Cola's ongoing strategy to enhance its market presence in Europe. The activities represent incremental steps in their strategic plan rather than a fundamental shift.
+
+SIGNIFICANCE_SCORE: 5
+2026-04-15 18:59:11,569 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 18:59:11,579 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.01s
+2026-04-15 18:59:12,517 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'Coca-Cola new product launches Europe April 2026'}
+2026-04-15 18:59:13,341 - live_CI_agent - INFO - Tool brave_search completed in 0.82s
+2026-04-15 18:59:21,820 - live_CI_agent - INFO - Task complete. Score: 5 | Significant: False
+2026-04-15 19:00:58,917 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Pepsi, PepsiCo, Pepsi-Cola. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 3 entries, oldest first):
+1. **Executive Summary:** PepsiCo has not announced any new product launches or brand repositioning specifically in Europe. However, strategic initiatives such as brand repositioning and portfolio refreshes in other regions could potentially influence future activities in Europe.
+
+2. **Key Findings:**
+   - PepsiCo is repositioning its biggest brands to gain more shelf space, including price cuts on core snack brands like Lay's and Doritos, primarily in North America (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - A comprehensive portfolio refresh is underway, involving global brands such as Lay’s, Tostitos, Gatorade, and Quaker, which could impact European markets (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - PepsiCo is entering a new strategic phase with operational restructuring, including job cuts in Spain, which may affect European operations (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+
+3. **Competitive Implication:** While there are no immediate changes in Europe, PepsiCo's strategic initiatives in other regions may signal potential future shifts in product offerings and brand positioning in the European market.
+
+4. **Sources:**
+   1. https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter
+
+5. **Significance Score Reasoning:** This is an existing development because the activities reported are not specific to Europe and do not represent new product launches or brand repositioning in the region. The significance score remains low due to the lack of direct impact on the European market.
+
+SIGNIFICANCE_SCORE: 2
+1. **Executive Summary:** There are no new developments regarding PepsiCo's product launches or brand repositioning in Europe as of April 2026. The current information does not indicate any specific activities in these regions.
+
+2. **Key Findings:** No new facts were found regarding PepsiCo's activities in Europe.
+
+3. **Competitive Implication:** The absence of new product launches or brand repositioning in Europe suggests that PepsiCo may be maintaining its existing market strategy in the region without significant changes or innovations at this time.
+
+4. **Sources:** No URLs available due to lack of specific findings.
+
+5. **Significance Score Reasoning:** This is an existing development because there are no new events or changes reported in PepsiCo's strategy or product offerings in Europe. The lack of new information results in a significance score of 1.
+
+SIGNIFICANCE_SCORE: 1
+1. **Executive Summary:** PepsiCo has not announced any new product launches or brand repositioning specifically in Europe. However, strategic initiatives such as brand repositioning and portfolio refreshes in other regions could potentially influence future activities in Europe.
+
+2. **Key Findings:**
+   - PepsiCo is repositioning its biggest brands to gain more shelf space, including price cuts on core snack brands like Lay's and Doritos, primarily in North America (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - A comprehensive portfolio refresh is underway, involving global brands such as Lay’s, Tostitos, Gatorade, and Quaker, which could impact European markets (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+   - PepsiCo is entering a new strategic phase with operational restructuring, including job cuts in Spain, which may affect European operations (https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter).
+
+3. **Competitive Implication:** While there are no immediate changes in Europe, PepsiCo's strategic initiatives in other regions may signal potential future shifts in product offerings and brand positioning in the European market.
+
+4. **Sources:**
+   1. https://www.foodbusinessnews.net/articles/23456-pepsico-reports-strong-first-quarter
+
+5. **Significance Score Reasoning:** This is an existing development because the activities reported are not specific to Europe and do not represent new product launches or brand repositioning in the region. The significance score remains low due to the lack of direct impact on the European market.
+
+SIGNIFICANCE_SCORE: 2
+2026-04-15 19:00:59,818 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 19:00:59,820 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 19:01:00,580 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo new product launches Europe April 2026'}
+2026-04-15 19:01:01,276 - live_CI_agent - INFO - Tool brave_search completed in 0.70s
+2026-04-15 19:01:02,341 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'PepsiCo brand repositioning Europe April 2026'}
+2026-04-15 19:01:03,077 - live_CI_agent - INFO - Tool brave_search completed in 0.74s
+2026-04-15 19:01:12,333 - live_CI_agent - INFO - Task complete. Score: 2 | Significant: False
+2026-04-15 19:01:12,335 - live_CI_agent - INFO - → Processing: DIRECTIVE: Use 'brave_scout' only. TODAY: April 15, 2026. Check Coca-Cola, Coke, The Coca-Cola Company. Focus: Monitor for new product launches in Europe or brand repositioning in Europe.
+        Ignore: routine earnings reports and recycled press coverage.. 
+PREVIOUS STATUS (last 3 entries, oldest first):
+1. **Executive Summary**: Coca-Cola has introduced new product flavors and strategic collaborations in Europe, including a new Sprite flavor and a FIFA World Cup campaign, marking a continuation of their active market engagement.
+
+2. **Key Findings**:
+   - Coca-Cola has expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry, continuing its product refresh strategy (April 2026). [Source](https://www.coca-colacompany.com/)
+   - The company is engaging European markets with a FIFA World Cup 2026 campaign, including a collaboration with Panini for a custom sticker collection available in May (April 2026). [Source](https://lbbonline.com/news/Coca-Cola-Raw-Passion-FIFA-World-Cup-2026)
+   - A new limited-time flavor, Sprite Loco Lime, has been introduced in collaboration with Wingstop, available at select locations (April 2026). [Source](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+3. **Competitive Implication**: Coca-Cola's continued product innovation and strategic collaborations in Europe suggest a robust approach to maintaining and enhancing market presence. Competitors may need to consider similar innovative strategies to keep pace.
+
+4. **Sources**:
+   1. [Coca-Cola Company](https://www.coca-colacompany.com/)
+   2. [LBB Online](https://lbbonline.com/news/Coca-Cola-Raw-Passion-FIFA-World-Cup-2026)
+   3. [Parade](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+5. **Significance Score Reasoning**: This is an existing development because the new product launches and collaborations are part of Coca-Cola's ongoing strategy to enhance its market presence in Europe. The activities represent incremental steps in their strategic plan rather than a fundamental shift.
+
+SIGNIFICANCE_SCORE: 5
+1. **Executive Summary**: Coca-Cola has continued its strategic push in Europe with new product launches and campaigns, including a new Sprite flavor and a FIFA World Cup campaign, marking ongoing market engagement.
+
+2. **Key Findings**:
+   - Coca-Cola launched the 'And a Coke' campaign across various platforms, emphasizing its role in dining experiences (April 13, 2026). [Source](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   - A new limited-edition flavor, Fanta Crimson Sour Cherry, was introduced as part of a collaboration with Xbox (April 2026). [Source](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   - Coca-Cola expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry (April 2026). [Source](https://www.coca-colacompany.com/)
+   - A new limited-time flavor, Sprite Loco Lime, has been introduced in collaboration with Wingstop, available at select locations (April 2026). [Source](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+3. **Competitive Implication**: Coca-Cola's continued product innovation and strategic collaborations in Europe suggest a robust approach to maintaining and enhancing market presence. Competitors may need to consider similar innovative strategies to keep pace.
+
+4. **Sources**:
+   1. [Bakery and Snacks](https://www.bakeryandsnacks.com/Article/2026/04/13/walkers-coca-cola-drumstick-and-cadbury-lead-aprils-biggest-new-product-launches/)
+   2. [AOL](https://www.aol.com/fanta-limited-edition-flavor-coming-130000482.html)
+   3. [Coca-Cola Company](https://www.coca-colacompany.com/)
+   4. [Parade](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+5. **Significance Score Reasoning**: This is an existing development because the new product launches and collaborations are part of Coca-Cola's ongoing strategy to enhance its market presence in Europe. The activities represent incremental steps in their strategic plan rather than a fundamental shift.
+
+SIGNIFICANCE_SCORE: 5
+1. **Executive Summary**: Coca-Cola has continued its strategic engagement in Europe with new product launches and campaigns, including the expansion of its cherry product line, a FIFA World Cup 2026 campaign, and a new Sprite flavor collaboration with Wingstop.
+
+2. **Key Findings**:
+   - Coca-Cola has expanded its cherry product line with Coca-Cola Cherry Float and Diet Coke Cherry, continuing its product refresh strategy (April 2026). [Source](https://www.coca-colacompany.com/)
+   - The company is engaging European markets with a FIFA World Cup 2026 campaign, including a collaboration with Panini for a custom sticker collection available in May (April 2026). [Source](https://lbbonline.com/news/Coca-Cola-Raw-Passion-FIFA-World-Cup-2026)
+   - A new limited-time flavor, Sprite Loco Lime, has been introduced in collaboration with Wingstop, available at select locations (April 2026). [Source](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+3. **Competitive Implication**: Coca-Cola's continued product innovation and strategic collaborations in Europe suggest a robust approach to maintaining and enhancing market presence. Competitors may need to consider similar innovative strategies to keep pace.
+
+4. **Sources**:
+   1. [Coca-Cola Company](https://www.coca-colacompany.com/)
+   2. [LBB Online](https://lbbonline.com/news/Coca-Cola-Raw-Passion-FIFA-World-Cup-2026)
+   3. [Parade](https://parade.com/food/coca-cola-launches-new-one-of-a-kind-flavor-with-twist-no-one-saw-coming)
+
+5. **Significance Score Reasoning**: This is an existing development because the new product launches and collaborations are part of Coca-Cola's ongoing strategy to enhance its market presence in Europe. The activities represent incremental steps in their strategic plan rather than a fundamental shift.
+
+SIGNIFICANCE_SCORE: 5
+2026-04-15 19:01:13,266 - live_CI_agent - DEBUG - Tool transfer_to_brave_scout input: {}
+2026-04-15 19:01:13,269 - live_CI_agent - INFO - Tool transfer_to_brave_scout completed in 0.00s
+2026-04-15 19:01:14,181 - live_CI_agent - DEBUG - Tool brave_search input: {'query': 'Coca-Cola new product launches Europe April 2026'}
+2026-04-15 19:01:14,980 - live_CI_agent - INFO - Tool brave_search completed in 0.80s
+2026-04-15 19:01:23,181 - live_CI_agent - INFO - Task complete. Score: 5 | Significant: False
