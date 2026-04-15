@@ -15,6 +15,8 @@ The Streamlit dashboard can be used to visualize data in the SQLite ledger at an
 python -m streamlit run dashboard.py --server.port 8501
 ```
 
+See [Run Instructions](#run-instructions) below for how to start the agent.
+
 All scripts in this folder are Learning/Demo status.
 
 ## Use cases

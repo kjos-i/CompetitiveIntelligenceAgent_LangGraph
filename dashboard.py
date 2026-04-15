@@ -94,7 +94,7 @@ df = load_data()
 
 
 # -- CHART PART --
-st.title("Competitor Intelligence Dashboard")
+st.title("Competitive Intelligence Dashboard")
 st.caption("Browse recent competitive-intelligence findings stored in the local ledger.")
 
 if df.empty:
