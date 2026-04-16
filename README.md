@@ -2,7 +2,7 @@
 
 Competitive Intelligence (CI) agent for monitoring competitors in real time. Built with LangGraph Supervisor, OpenAI GPT-4o, Brave Search, and Tavily.
 
-In auto mode, the agent runs two specialist sub-agents under a supervisor. First, **`brave_scout`** performs a broad web scan. Then the supervisor scores each result for significance relative to previous findings, flags companies that cross the threshold, and saves to the SQLite ledger. Once all scans are complete, a human-in-the-loop checkpoint presents the flagged findings and asks whether to proceed with more extensive searches. If approved, **`tavily_analyst`** targets the flagged changes and conducts a thorough investigation. The supervisor again scores the results and saves them to the ledger. All results are visualised in a Streamlit dashboard.
+In auto mode, the agent runs two specialist sub-agents under a supervisor. First, **`brave_scout`** performs a broad web scan. Then the supervisor scores each result for significance relative to previous findings, flags it if it crosses the threshold, and saves to the SQLite ledger. Once all scans are complete, a human-in-the-loop checkpoint presents the flagged findings and asks whether to proceed with more extensive searches. If approved, **`tavily_analyst`** targets the flagged changes and conducts a thorough investigation. The supervisor again scores the results and saves them to the ledger. All results are visualised in a Streamlit dashboard.
 
 The Streamlit dashboard can be used to visualize data in the SQLite ledger at any time:
 
