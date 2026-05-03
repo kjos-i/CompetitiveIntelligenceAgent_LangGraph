@@ -1,18 +1,17 @@
-"""SQLite persistence layer for the Moodgruppen agent.
+"""SQLite persistence layer for the CI agent.
 
-Provides three operations on the ``intel_ledger`` table:
-- ``init_db``                  — create the table on first run.
-- ``get_latest_company_intel`` — fetch the last N reports for a company.
-- ``save_to_ledger``           — persist a completed research report.
+Provides three operations on the intel_ledger table:
+- init_db                  — create the table on first run.
+- get_latest_company_intel — fetch the last N reports for a company.
+- save_to_ledger           — persist a completed research report.
 
-The database file is stored next to this module as ``agent_memory.db``.
+The database file is stored next to this module as agent_memory.db.
 """
 
 # Standard library
 import sqlite3
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
 
 # Local
 from config import HISTORY_LIMIT
@@ -44,7 +43,7 @@ def get_latest_company_intel(company_name: str, limit: int = HISTORY_LIMIT) -> l
     """Return the most recent ledger results for *company_name*.
 
     Rows are ordered newest-first and capped at *limit* (default:
-    ``HISTORY_LIMIT`` from config.py).
+    HISTORY_LIMIT from config.py).
     """
     with sqlite3.connect(DB_PATH) as conn:
         cursor = conn.cursor()
@@ -62,17 +61,17 @@ def save_to_ledger(
     result: str,
     significance_score: int,
     significance_flag: bool = False,
-    sentiment: Optional[str] = None,
-    sentiment_score: Optional[int] = None,
-    engine: Optional[str] = None,
-    mode: Optional[str] = None,
+    sentiment: str | None = None,
+    sentiment_score: int | None = None,
+    engine: str | None = None,
+    mode: str | None = None,
 ) -> None:
     """Persist a completed research report to the intel ledger.
 
     Column mapping:
-    - ``Description`` stores the one-word sentiment label (e.g. "positive").
-    - ``Sentiment``   stores the numeric sentiment score (1–10).
-    - ``Importance``  is set to 1 when *significance_flag* is True (i.e. the
+    - Description stores the one-word sentiment label (e.g. "positive").
+    - Sentiment   stores the numeric sentiment score (1–10).
+    - Importance  is set to 1 when *significance_flag* is True (i.e. the
       score met or exceeded SIGNIFICANCE_THRESHOLD).
     """
     query_sql = """

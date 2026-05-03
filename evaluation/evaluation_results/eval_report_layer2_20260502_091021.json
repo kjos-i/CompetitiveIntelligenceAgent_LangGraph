@@ -1,0 +1,474 @@
+{
+  "generated_at": "2026-05-02T09:10:21.561437",
+  "session_id": "3476c9934ffb40e1a7dcc3d9ab94799b",
+  "layer": 2,
+  "judge_model": "gpt-4o-mini",
+  "threshold": 0.5,
+  "execution_mode": "live",
+  "dataset_path": "C:\\Users\\kjosi\\Langgraph\\CompetitiveIntelligenceAgent_LangGraph\\evaluation\\eval_cases_layer2.json",
+  "gate_thresholds": {
+    "judge_threshold": 0.5,
+    "required_keyword_threshold": 0.5,
+    "min_report_length": 200
+  },
+  "summary": {
+    "case_count": 7,
+    "pass_count": 7,
+    "pass_rate": 1.0,
+    "avg_judge_run_score": 0.8,
+    "avg_significance_score_valid": 1.0,
+    "avg_tool_call_count": 1.0,
+    "avg_directive_compliance": 1.0,
+    "avg_recursion_limit_hit_rate": 0.0,
+    "avg_result_count": null,
+    "avg_domain_exclusion_respected": 1.0,
+    "avg_domain_inclusion_present": null,
+    "avg_agent_input_tokens": 4841.0,
+    "avg_agent_output_tokens": 774.0,
+    "avg_agent_total_tokens": 5615.0,
+    "avg_judge_input_tokens": 8606.0,
+    "avg_judge_output_tokens": 1317.0,
+    "avg_judge_total_tokens": 9924.0,
+    "avg_latency_seconds": 9.56,
+    "avg_required_keyword_hit_rate": 1.0,
+    "avg_disallowed_keyword_hits": 0.0,
+    "judge_model": "gpt-4o-mini",
+    "execution_mode": "live",
+    "enabled_groups": [
+      "format",
+      "judge",
+      "routing"
+    ],
+    "metric_averages": {
+      "answer_relevancy": 0.81,
+      "faithfulness": 0.84,
+      "no_speculation": 0.74,
+      "required_sections_present": 1.0,
+      "citation_presence": 1.0
+    }
+  },
+  "results": [
+    {
+      "id": "No change Brave",
+      "layer": 2,
+      "category": "delta_scoring",
+      "notes": "Previous status exactly matches web results. Agent must not inflate the score. Score must be 1-3.",
+      "scenario_type": "no_change",
+      "question": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Nike: Monitor for new product launches in Europe or brand repositioning in Europe.",
+      "expected_output": null,
+      "answer": "1. **Executive Summary**: Nike has recently launched several initiatives and products in Europe, including the SNKRS Verified program, the introduction of the Alphafly 4 prototype, and the opening of a new flagship store in the Netherlands. These moves indicate Nike's strategic focus on enhancing product storytelling, innovation in athletic footwear, and expanding its retail presence in Europe.\n\n2. **Key Findings**:\n   - Nike has launched the SNKRS Verified program to provide direct product stories and release news, with products expected to launch by the end of Summer 2026 (https://www.soleretriever.com/news/articles/nike-snkrs-verified-episode-1).\n   - The Alphafly 4 prototype was showcased at the 2026 Boston Marathon, highlighting Nike's competitive response to Adidas's latest offerings (https://www.gearpatrol.com/outdoors/nike-alphafly-4-prototype-preview/).\n   - A new flagship store opened in Amstelveen, Netherlands, on April 2, 2026, as part of Nike's strategy to strengthen its retail presence in Europe (https://retailboss.co/nike-flagship-store-opening-stadshart-amstelveen/).\n\n3. **Competitive Implication**: These developments suggest Nike is actively working to maintain its competitive edge in Europe through innovative product launches and strategic retail expansions. The SNKRS Verified program could enhance consumer engagement by providing exclusive insights into upcoming products, while the Alphafly 4 prototype positions Nike strongly in the competitive athletic footwear market.\n\n4. **Sources**:\n   1. https://www.soleretriever.com/news/articles/nike-snkrs-verified-episode-1\n   2. https://www.gearpatrol.com/outdoors/nike-alphafly-4-prototype-preview/\n   3. https://retailboss.co/nike-flagship-store-opening-stadshart-amstelveen/\n\n5. **Significance Score Reasoning**: This is a new development because it includes the launch of a new program (SNKRS Verified), a new product prototype (Alphafly 4), and a new retail location in Europe, all of which were not previously reported. These initiatives represent strategic moves by Nike to enhance its market position in Europe.\n\nSIGNIFICANCE_SCORE: 7",
+      "latency_seconds": 8.94,
+      "agent_input_tokens": 4312,
+      "agent_output_tokens": 851,
+      "agent_total_tokens": 5163,
+      "judge_input_tokens": 8786,
+      "judge_output_tokens": 1271,
+      "judge_total_tokens": 10057,
+      "required_sections_present": 1.0,
+      "citation_presence": 1.0,
+      "significance_score_valid": 1.0,
+      "tool_call_count": 1,
+      "directive_compliance": 1.0,
+      "significance_score": null,
+      "score_in_expected_range": null,
+      "domain_exclusion_respected": 1.0,
+      "keyword_checks": {
+        "required_keyword_hit_rate": 1.0,
+        "disallowed_keyword_hits": 0
+      },
+      "judge_metrics": {
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the output successfully focused on the requested task without any irrelevant statements. Great job on staying on point!",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "faithfulness": {
+          "score": 0.75,
+          "reason": "The score is 0.75 because the actual output refers specifically to the Alphafly 4 prototype, while the retrieval context only mentions an Alphafly prototype without detailing the version, leading to a slight misalignment in specificity.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "no_speculation": {
+          "score": 0.8,
+          "reason": "The Key Findings section contains factual claims that are directly supported by valid URLs from the Retrieval Context, allowing for verification. Each claim about the SNKRS Verified program, Alphafly 4 prototype, and the new flagship store opening includes specific details and aligns with the retrieved sources, meeting the evaluation steps. However, the significance score reasoning section lacks a clear tie to the facts presented in the Key Findings, making it slightly less coherent.",
+          "passed": true,
+          "threshold": 0.5
+        }
+      },
+      "avg_judge_score": 0.85,
+      "report_length": 2130,
+      "recursion_limit_hit": 0,
+      "status": "PASS",
+      "failure_reasons": [],
+      "errors": [],
+      "tool_output": "Command(graph='__parent__', update={'messages': [HumanMessage(content=\"DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Nike: Monitor for new product launches in Europe or brand repositioning in Europe.\", additional_kwargs={}, response_metadata={}, id='45e6f832-7c70-4ca7-aa6d-273d5a555c2d')], 'remaining_steps': 24}, goto='brave_scout')\ncontent='[{\"title\": \"Nike Release Dates 2026 - Updated in Real Time\", \"link\": \"https://www.soleretriever.com/sneaker-release-dates/nike\", \"snippet\": \"Upcoming Nike sneaker releases and sneaker raffles. Every sneaker release past and present for Nike and where to buy. Nike products can be purchased on nike.com, the Nike SNKRS app, in-person at physical Nike stores across the globe, and via a wide range of retailers like Foot Locker, JD Sports, Dick\\'s Sporting Goods, and many more. Nike\\'s website offers free shipping on orders over $50 and provides free returns on virtually every product.The Nike Mind is Restocking May 21 Nike is a sportswear brand founded in 1964 as Blue Ribbon Sports by Bill Bowerman and Phil Knight. Blue Ribbon officially changed its name to Nike on May 30, 1971, and since then, Nike has expanded its reach exponentially. Other brands under the Nike umbrella include Jordan Brand, Nike SB, Nike ACG, .SWOOSH, and Converse. Top athletes like LeBron James, Kevin Durant, Cristiano Ronaldo, Serena Williams, Kylian Mbapp\\\\u00e9, Naomi Osaka, as well as superstars like Travis Scott and Kim Kardashian call Nike home.\"}, {\"title\": \"Nike Unveils Upcoming Releases with SNKRS Verified\", \"link\": \"https://www.soleretriever.com/news/articles/nike-snkrs-verified-episode-1\", \"snippet\": \"We\\\\u2019ll see how long Nike SNKRS Verified runs for, and what other products are unveiled via the new program. Expect all of these sneakers previewed to launch by the end of the Summer 2026 season (April-June). Nike is dropping first looks at upcoming products with SNKRS Verified. Find all the shoes revealed in SNKRS Verified Episode 1 here. Nicholas VlahosPublished April 28, 2026 at 8:30 PM \\\\u00b7 Nike has introduced a new program to debut upcoming products Loaded on the Nike SNKRS app without warning, SNKRS Verified is described by The Swoosh as \\\\u201can always-on editorial dedicated to the upcoming season\\'s most anticipated drops.\\\\u201d Nike promises to provide \\\\u201creal product stories, inspiration, details, and release news straight from Nike\\\\u2019s very own designers and PLMs.\\\\u201d Media companies, influencers, and even the regular consumer are operating on timetables much longer than the brand would like, as we receive word of new releases sometimes over a year out. Nike has taken some steps to thwart leakers, like how Ja Morant can now drop first looks at his latest model, the Ja 4, before an official rollout can begin, but we\\\\u2019ve also seen Nike take a jab at leakers in other ways.\"}, {\"title\": \"Nike Is Already Teasing Its Answer to Adidas\\'s Game-Changing Super Shoe\", \"link\": \"https://www.gearpatrol.com/outdoors/nike-alphafly-4-prototype-preview/\", \"snippet\": \"Perhaps the most perplexing aspect of the <strong>Alphafly 4,</strong> assuming Nike calls it that, is the upper. While Adidas went the minimalist route, equipping the Adizero Adios Pro Evo 3 with an almost transparent-like upper, the Alphafly 4 seems to go ... Perhaps the most perplexing aspect of the Alphafly 4, assuming Nike calls it that, is the upper. While Adidas went the minimalist route, equipping the Adizero Adios Pro Evo 3 with an almost transparent-like upper, the Alphafly 4 seems to go in a different direction. Charles Hicks ran 2:04:35, a record for a British-born runner, at the 2026 Boston Marathon wearing the Alphafly prototype.Nike At the 2026 London Marathon, Sabastian Sawe stopped the running world in its tracks. A day earlier, that would have been enough to set a new world record, but Nike\\\\u2019s press release proved to portend the inevitable with its opening line: ... So, too, are the shoes. ... Jack Seemer is the executive editor at Gear Patrol, with over a decade of experience in product journalism. The Grandfather of Nike Super Shoes Returns as a Sleek Everyday Sneaker \\\\u00b7 Want to stay up to date on the latest product news and releases?\"}, {\"title\": \"Nike Sneakers Releasing in May 2026 Calendar: Read Before You Buy\", \"link\": \"https://wwd.com/footwear-news/sneaker-news/nike-sneaker-release-date-calendar-may-2026-1238925999/\", \"snippet\": \"Release Date: May 2 Price: $145 SKU: IU7240-002 After two colorways dropped in April, a third arrives from the link-up of the \\\\u201cJurassic Park\\\\u201d franchise and Ja Morant\\\\u2019s hit signature sneaker. WWD and Women\\'s Wear Daily are part of Penske Media Corporation. \\\\u00a9 2026 Fairchild Publishing, LLC. All Rights Reserved. Release Date: May 2 Price: $145 SKU: IU7240-002 After two colorways dropped in April, a third arrives from the link-up of the \\\\u201cJurassic Park\\\\u201d franchise and Ja Morant\\\\u2019s hit signature sneaker. Release Date: May 2 Price: $150 SKU: IO8765-100 Nigo\\\\u2019s latest Nike collab uses the Air Force 1 Low to look back on \\\\u201cLast Orgy 2,\\\\u201d the influential magazine column he edited with Jun Takahashi before they opened a store together and eventually started their own brands. Release Date: May 22 Price: $170 SKU: IX0704-600 Nike has been going heavy over the last year on sneakers shouting out the DMV area, and the latest to join the mix is the Zoom Hyperflight in cherry blossom pink.\"}, {\"title\": \"Nike Opens A New Flagship Store In Amstelveen As Stadshart Continues Its Transformation\", \"link\": \"https://retailboss.co/nike-flagship-store-opening-stadshart-amstelveen/\", \"snippet\": \"The store opened on <strong>April 2, 2026</strong>, as part of the ongoing redevelopment of the Rembrandtweg area within the shopping center, and joins a wave of new retail arrivals that are reshaping one of the Netherlands\\\\u2019 most established regional shopping ... The store opened on April 2, 2026, as part of the ongoing redevelopment of the Rembrandtweg area within the shopping center, and joins a wave of new retail arrivals that are reshaping one of the Netherlands\\\\u2019 most established regional shopping destinations. The Nike opening is one of several high profile launches tied to Stadshart Amstelveen\\\\u2018s broader transformation. The Amstelveen opening reflects Nike\\\\u2018s ongoing commitment to maintaining a strong physical retail presence across Europe, supplementing its dominant e commerce operation with well located stores that deliver an in person brand experience. The Amstelveen location operates as a partnered Nike store, a retail model the brand uses to expand its physical presence through carefully selected local partners who operate under the Nike brand identity and standards. The store offers the full Nike product range across footwear, apparel, and accessories, with opening hours that include extended Thursday trading until 9pm, catering to the shopping patterns of the local and regional customer base. Credit: Nike / LinkedIn.\"}]' name='brave_search' tool_call_id='call_cpoLreVnbkxXdH7dIwrfsfpS'",
+      "tool_names": [
+        "transfer_to_brave_scout",
+        "brave_search"
+      ]
+    },
+    {
+      "id": "Major new entity Tavily",
+      "layer": 2,
+      "category": "delta_scoring",
+      "notes": "No prior data — any finding is new. Score must be 7-10 for a genuinely new strategic entity.",
+      "scenario_type": "major_new_entity",
+      "question": "DIRECTIVE: Use 'tavily_analyst' only. TODAY: April 23, 2026. Research Adidas: Monitor for new product launches in Europe or brand repositioning in Europe.",
+      "expected_output": null,
+      "answer": "1. **Executive Summary**: Adidas has launched several new products in Europe, including the World Cup 2026 SvFF Sweden Club Home Ball, Spain 26 Away Yamal Jersey, and updated Handball Spezial Shoes. No new brand repositioning efforts in Europe have been identified.\n\n2. **Key Findings**:\n   - Adidas launched the World Cup 2026 SvFF Sweden Club Home Ball, celebrating soccer's spirit ([adidas.com](https://www.adidas.com/us/trionda-sweden-home-club-ball/JY0289.html)).\n   - The Spain 26 Away Yamal Jersey, featuring Climacool technology, blends traditional design with modern performance ([adidas.com](https://www.adidas.com/us/spain-26-away-yamal-jersey/KW9063.html)).\n   - Handball Spezial Shoes have been updated for casual style with a smooth suede and leather upper ([adidas.com](https://www.adidas.com/us/handball-spezial-shoes/IF6490.html)).\n\n3. **Competitive Implication**: The introduction of these new products could strengthen Adidas' market position in Europe by appealing to soccer fans and those interested in casual sportswear. However, the lack of brand repositioning efforts suggests a focus on product innovation rather than strategic shifts.\n\n4. **Sources**:\n   1. [adidas.com - World Cup 2026 SvFF Sweden Club Home Ball](https://www.adidas.com/us/trionda-sweden-home-club-ball/JY0289.html)\n   2. [adidas.com - Spain 26 Away Yamal Jersey](https://www.adidas.com/us/spain-26-away-yamal-jersey/KW9063.html)\n   3. [adidas.com - Handball Spezial Shoes](https://www.adidas.com/us/handball-spezial-shoes/IF6490.html)\n\n5. **Significance Score Reasoning**: This is a new development because the launch of new products represents an incremental step in Adidas' product offerings in Europe. However, without any brand repositioning, the significance is limited to product innovation rather than a strategic overhaul.\n\nSIGNIFICANCE_SCORE: 5",
+      "latency_seconds": 12.11,
+      "agent_input_tokens": 5488,
+      "agent_output_tokens": 819,
+      "agent_total_tokens": 6307,
+      "judge_input_tokens": 6500,
+      "judge_output_tokens": 1261,
+      "judge_total_tokens": 7761,
+      "required_sections_present": 1.0,
+      "citation_presence": 1.0,
+      "significance_score_valid": 1.0,
+      "tool_call_count": 1,
+      "directive_compliance": 1.0,
+      "significance_score": null,
+      "score_in_expected_range": null,
+      "domain_exclusion_respected": 1.0,
+      "keyword_checks": {
+        "required_keyword_hit_rate": 1.0,
+        "disallowed_keyword_hits": 0
+      },
+      "judge_metrics": {
+        "answer_relevancy": {
+          "score": 0.5,
+          "reason": "The score is 0.50 because several statements included in the response diverge from the directive of monitoring Adidas for product launches and brand repositioning in Europe. While some relevant information is provided, the presence of multiple irrelevant details about specific products and releases detracts from the overall relevance of the answer.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "faithfulness": {
+          "score": 0.67,
+          "reason": "The score is 0.67 because the actual output inaccurately asserts that Adidas launched a specific ball for the World Cup 2026, while the context only references a different name for the ball without confirmation. Additionally, the output suggests that Adidas Handball Spezial Shoes have been updated for casual style, but the context only states their original purpose without indicating any modifications.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "no_speculation": {
+          "score": 0.7,
+          "reason": "The evaluation identified several factual claims regarding Adidas's new product launches in Europe from the Key Findings, all of which were accurately sourced from the provided URLs. Each item was verified against the retrieval context, demonstrating that the claims were substantiated. However, the report stated no new brand repositioning efforts, consistent with the retrieval results. Despite having relevant sourced claims, there was a lack of citation for the claim about brand repositioning, which was only stated without a proper reference. This shortcoming impacted the overall reliability. Overall, the strong substantiation of product claims and corresponding citations warrant a solid score, but the issue with the repositioning claim prevents a top score.",
+          "passed": true,
+          "threshold": 0.5
+        }
+      },
+      "avg_judge_score": 0.62,
+      "report_length": 1848,
+      "recursion_limit_hit": 0,
+      "status": "PASS",
+      "failure_reasons": [],
+      "errors": [],
+      "tool_output": "Command(graph='__parent__', update={'messages': [HumanMessage(content=\"DIRECTIVE: Use 'tavily_analyst' only. TODAY: April 23, 2026. Research Adidas: Monitor for new product launches in Europe or brand repositioning in Europe.\", additional_kwargs={}, response_metadata={}, id='6b3d33e1-2488-44e2-aaca-8c684e9205db')], 'remaining_steps': 24}, goto='tavily_analyst')\ncontent='{\"query\": \"Adidas new product launches Europe April 2026\", \"follow_up_questions\": null, \"answer\": null, \"images\": [], \"results\": [{\"url\": \"https://www.adidas.com/us/trionda-sweden-home-club-ball/JY0289.html\", \"title\": \"adidas Trionda Sweden Home Club Ball | Free Shipping with adiClub\", \"content\": \"Introducing the World Cup 2026 SvFF Sweden Club Home Ball, a tribute to the spirit of soccer and the thrill of the game designed to deliver a reliable\", \"score\": 0.3443558, \"raw_content\": null}, {\"url\": \"https://www.adidas.com/us/spain-26-away-yamal-jersey/KW9063.html\", \"title\": \"adidas Spain 26 Away Yamal Jersey | Free Shipping with adiClub\", \"content\": \"Soccer jersey with Climacool technology for cool feeling comfort. The Spain 26 Away Yamal Jersey blends tradition with modern performance.\", \"score\": 0.097467884, \"raw_content\": null}, {\"url\": \"https://www.adidas.com/us/handball-spezial-shoes/IF6490.html\", \"title\": \"adidas Handball Spezial Shoes - Brown | Free Shipping with adiClub\", \"content\": \"Originally made for handball courts in 1979, these shoes transition effortlessly to casual style. A smooth suede and leather upper provides premium comfort.\", \"score\": 0.059128825, \"raw_content\": null}], \"response_time\": 1.6, \"request_id\": \"ea2ed6cf-807f-4654-a91c-628904fa9e3e\"}' name='tavily_search' tool_call_id='call_gEzRaBhiPdhrMccDVGDCYrOS'\ncontent='{\"query\": \"Adidas brand repositioning Europe April 2026\", \"follow_up_questions\": null, \"answer\": null, \"images\": [], \"results\": [{\"title\": \"Upcoming Sneaker & Clothing Release Dates | adidas US\", \"url\": \"https://www.adidas.com/us/release-dates\", \"content\": \"4 days ago - Never miss a drop with our up-to-date source for adidas new shoe and apparel releases. Stay on top of Yeezy, NMD & Pharrell release dates with the official adidas calendar.\", \"score\": 0.04880799, \"raw_content\": null}], \"response_time\": 2.89, \"request_id\": \"10ecc9fe-f4da-4367-94d0-6b1aade3a0ad\"}' name='tavily_search' tool_call_id='call_yQaSW4gI2pfyMgbAUFDTgZN3'",
+      "tool_names": [
+        "transfer_to_tavily_analyst",
+        "tavily_search",
+        "tavily_search"
+      ]
+    },
+    {
+      "id": "Old information Brave search",
+      "layer": 2,
+      "category": "delta_scoring",
+      "notes": "Web results are older than 1 month relative to TODAY. Recency cap must be enforced. Score must be 1-2.",
+      "scenario_type": "old_information",
+      "question": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Puma: Monitor for new product launches in Europe or brand repositioning in Europe.",
+      "expected_output": null,
+      "answer": "1. **Executive Summary:** Puma has launched new products in Europe, including a performance shoe for HYROX and new federation kits for the FIFA World Cup. Additionally, Puma is undergoing a brand repositioning in Europe, focusing on inventory clearance and operational restructuring.\n\n2. **Key Findings:**\n   - Puma launched the first-ever performance shoe specifically designed for HYROX in Europe. (Published April 30, 2026) [Source](https://about.puma.com/en/newsroom/corporate-news/2026/30-04-2026-solid-start-year-puma-supported-inventory-clearance-outlook)\n   - Puma released new federation kits for the FIFA World Cup. (Published April 30, 2026) [Source](https://about.puma.com/en/newsroom/corporate-news/2026/30-04-2026-solid-start-year-puma-supported-inventory-clearance-outlook)\n   - Puma introduced the Cell Geo shoes, a new version of a shoe from the 1990s. (Published April 30, 2026) [Source](https://wwd.com/footwear-news/shoe-industry-news/https-wwd-com-business-news-financial-puma-q1-2026-sales-fall-1-percent-1238933264/)\n   - Puma is restructuring its European operations, reducing its workforce, and simplifying its product portfolio. (Published April 30, 2026) [Source](https://wwd.com/footwear-news/shoe-industry-news/https-wwd-com-business-news-financial-puma-q1-2026-sales-fall-1-percent-1238933264/)\n   - Puma's CEO, Arthur Hoeld, aims to rebuild brand heat with significant progress expected by the spring/summer 2027 collection. (Published April 30, 2026) [Source](https://wwd.com/footwear-news/shoe-industry-news/puma-q1-2026-solid-start-turnaround-progress-1238936555/)\n\n3. **Competitive Implication:** The launch of new products and the strategic repositioning in Europe indicate Puma's efforts to strengthen its market presence and adapt to changing consumer demands. The focus on operational restructuring and inventory clearance suggests a strategic shift to enhance efficiency and brand appeal.\n\n4. **Sources:**\n   1. https://about.puma.com/en/newsroom/corporate-news/2026/30-04-2026-solid-start-year-puma-supported-inventory-clearance-outlook\n   2. https://wwd.com/footwear-news/shoe-industry-news/https-wwd-com-business-news-financial-puma-q1-2026-sales-fall-1-percent-1238933264/\n   3. https://wwd.com/footwear-news/shoe-industry-news/puma-q1-2026-solid-start-turnaround-progress-1238936555/\n\n5. **Significance Score Reasoning:** This is a new development because Puma has introduced new products and is actively repositioning its brand in Europe, which were not part of the previous status. The combination of product launches and strategic restructuring represents a significant shift in Puma's market strategy.\n\n**SIGNIFICANCE_SCORE: 7**",
+      "latency_seconds": 12.03,
+      "agent_input_tokens": 5027,
+      "agent_output_tokens": 1005,
+      "agent_total_tokens": 6032,
+      "judge_input_tokens": 10870,
+      "judge_output_tokens": 1538,
+      "judge_total_tokens": 12408,
+      "required_sections_present": 1.0,
+      "citation_presence": 1.0,
+      "significance_score_valid": 1.0,
+      "tool_call_count": 1,
+      "directive_compliance": 1.0,
+      "significance_score": null,
+      "score_in_expected_range": null,
+      "domain_exclusion_respected": 1.0,
+      "keyword_checks": {
+        "required_keyword_hit_rate": 1.0,
+        "disallowed_keyword_hits": 0
+      },
+      "judge_metrics": {
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no irrelevant statements found in the output, indicating a perfect alignment with the input directive.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "faithfulness": {
+          "score": 0.83,
+          "reason": "The score is 0.83 because the actual output makes an unsupported claim about PUMA's Cell Geo shoes, which is not referenced in the provided context, leading to a discrepancy.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "no_speculation": {
+          "score": 0.9,
+          "reason": "The report demonstrates a high level of alignment with the evaluation steps. All factual claims in the Key Findings section are directly supported by credible sources from the Retrieval Context, ensuring each claim is traceable and not speculative. There are no claims lacking URLs, as all sources are appropriately cited. The coherence of the report is maintained throughout, clearly linking Puma's product launches and operational changes to the listed sources. However, the mention of the significance score reasoning could be more explicitly connected to the evidence presented, slightly diminishing its clarity. Overall, the report is strong in its factual integrity and coherence.",
+          "passed": true,
+          "threshold": 0.5
+        }
+      },
+      "avg_judge_score": 0.91,
+      "report_length": 2677,
+      "recursion_limit_hit": 0,
+      "status": "PASS",
+      "failure_reasons": [],
+      "errors": [],
+      "tool_output": "Command(graph='__parent__', update={'messages': [HumanMessage(content=\"DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Puma: Monitor for new product launches in Europe or brand repositioning in Europe.\", additional_kwargs={}, response_metadata={}, id='5043243c-1b6b-4039-b77c-d22b9ca0d56e')], 'remaining_steps': 24}, goto='brave_scout')\ncontent='[{\"title\": \"Solid start to the year for PUMA, supported by inventory clearance - Outlook for transition year 2026 confirmed | PUMA\\\\u00ae\", \"link\": \"https://about.puma.com/en/newsroom/corporate-news/2026/30-04-2026-solid-start-year-puma-supported-inventory-clearance-outlook\", \"snippet\": \"We had successful product launches such as <strong>the first ever performance shoe made specifically for HYROX as well as our federation kits for the FIFA World Cup</strong>. Operationally, we were off to a solid start to our transition year in 2026. \\\\u201cIn the first quarter our athletes won 21 medals at the World Athletics Indoor Championships and set national records at the Berlin Half Marathon. We had successful product launches such as the first ever performance shoe made specifically for HYROX as well as our federation kits for the FIFA World Cup. Operationally, we were off to a solid start to our transition year in 2026. However, both Running and Training saw strong growth, driven by NITRO\\\\u2122 styles and the rapid expansion of HYROX products. Apparel sales increased by 0.9% (ca) to \\\\u20ac 546.3 million (Q1 2025: \\\\u20ac 568.8 million). In addition to the Golf and Training categories, Football also demonstrated robust performance, driven by the sale of PUMA jerseys of the eleven football teams - including Portugal - that have qualified for the upcoming FIFA World Cup 2026\\\\u2122 in the USA, Canada, and Mexico. Although E-commerce promotions were reduced, sales experienced a modest increase of 0.6% (ca), supported by additional E-commerce marketplaces across APAC. The DTC share for PUMA increased to 28.3% in Q1 2026, up from 27.5% during the previous year period. Marketing expenses were down from last year\\\\u2019s level in both absolute terms and as a percentage of sales due to phasing effects across partnerships and campaigns. As OPEX decreased less pronounced than sales, the OPEX ratio, adjusted for one-time effects, increased from 45.1% to 45.5% in Q1 2026.\"}, {\"title\": \"Puma Q1 Earnings 2026: Sales Fall 1 Percent as Company Reset Proceeds\", \"link\": \"https://wwd.com/footwear-news/shoe-industry-news/https-wwd-com-business-news-financial-puma-q1-2026-sales-fall-1-percent-1238933264/\", \"snippet\": \"Inventory takebacks and liquidation sales saw the German sportswear brand perform better than expected in the first quarter of 2026. ... Puma&#x27;s recently released <strong>Cell Geo shoes</strong>, a new version of a shoe first introduced in the 1990s. Courtesy ... Inventory takebacks and liquidation sales saw the German sportswear brand perform better than expected in the first quarter of 2026. ... Puma\\'s recently released Cell Geo shoes, a new version of a shoe first introduced in the 1990s. Courtesy ... For Puma, the past nine months have been all about discounting. That is, there\\\\u2019s been way too much of it, the German sportswear brand\\\\u2019s executives argue. They believe they should be selling more of their products at full price and to this end, the company has been reducing inventory around the world and will simplify its product portfolio going forward. Market analysts from the likes of Deutsche Bank, Jefferies and the Royal Bank of Canada all praised the results because Puma had outdone forecasts. However, as several pointed out, inventory reduction and liquidation are one thing, regaining market relevance and releasing new products quite another. \\\\u201cOur Q1 results for 2026 are in line with our expectations and I would say they are a very solid start to what we call our transition year,\\\\u201d Hoeld explained. Besides taking back products, Puma has also restructured its European operations and reduced its workforce. The company previously said 1,400 corporate roles would be cut. The takebacks have increased Puma\\\\u2019s own inventory but the company is now liquidating that excess stock by selling it through select wholesalers or its own direct-to-consumer channels. It should all be gone by the end of 2026, Hoeld noted, and so far the brand has seen better-than-expected results from its liquidation tactics.\"}, {\"title\": \"Puma\\'s Q1 operating profit exceeds expectations but sales fall; Mark Langer appointed CFO - FashionNetwork USA\", \"link\": \"https://us.fashionnetwork.com/news/Puma-s-q1-operating-profit-exceeds-expectations-but-sales-fall-mark-langer-appointed-cfo,1828464.html\", \"snippet\": \"We successfully launched new products, such as <strong>the first performance shoe made specifically for &#x27;Hyrox&#x27; and the official uniforms for the FIFA World Cup</strong>,&quot; emphasises Arthur Hoeld, Puma&#x27;s CEO. We successfully launched new products, such as the first performance shoe made specifically for \\'Hyrox\\' and the official uniforms for the FIFA World Cup,\\\\\" emphasises Arthur Hoeld, Puma\\'s CEO. \\\\\"From an operational perspective, we began our transition year in 2026 with excellent results. Financial results improved in Q1 of the current financial year for German sportswear manufacturer Puma, which delivered an operating profit above expectations, supported by inventory clearance and lower operating expenses, and confirmed its outlook for 2026, which will nevertheless remain a transitional year. Inventories decreased by 8.6% on a reported basis and by 4.1% at constant currencies, to \\\\u20ac1.9 billion, mainly due to lower purchasing volumes. The reduction in inventories was slightly ahead of plan, and Puma expects these stocks to normalise by the end of 2026. The increase was mainly driven by a 5.7% rise in sales at company-owned and -operated retail stores, supported by inventory clearance through outlet stores and targeted promotional activity in this channel. Despite fewer promotions, e-commerce sales increased modestly by 0.6%, supported by presence on additional e-commerce marketplaces across the APAC region. Puma\\'s DTC share of sales rose to 28.3% in Q1 2026, up from 27.5% in the same period a year earlier.\"}, {\"title\": \"Puma CEO Says Company Is Off to a \\\\u2018Very Solid Start\\\\u2019 in 2026 as Stock Ticks Up on Turnaround Progress\", \"link\": \"https://wwd.com/footwear-news/shoe-industry-news/puma-q1-2026-solid-start-turnaround-progress-1238936555/\", \"snippet\": \"The <strong>Puma Fast-R Nitro Elite 3.</strong> Courtesy of Puma \\\\u00b7 Hoeld also spoke about rebuilding brand heat, which is expected to reach its stride by the spring/summer 2027 collection. \\\\u201cWe\\\\u2019re making progress in terms of building on our strength, which ... In footwear, Nitro running and Hyrox-related products are doing well, while low-profile silhouettes are dominating the lifestyle shoe category. ... Ros\\\\u00e9 for Puma. Puma ... Puma chief executive officer Arthur Hoeld, who took on the top job in July, told analysts on the company\\\\u2019s first quarter 2026 conference call on Thursday that the brand saw a \\\\u201cvery solid start\\\\u201d to the year. However, he added that he\\\\u2019s \\\\u201cvery encouraged by solid development\\\\u201d in the brand\\\\u2019s Nitro running franchise as well as the rapid expansion of Hyrox-related products. The Puma Fast-R Nitro Elite 3. Courtesy of Puma \\\\u00b7 Hoeld also spoke about rebuilding brand heat, which is expected to reach its stride by the spring/summer 2027 collection. \\\\u201cWe\\\\u2019re making progress in terms of building on our strength, which is definitely the Nitro platform across running and training,\\\\u201d he said. \\\\u201cSpecifically, we will launch new products in both areas, and we have received pretty positive feedback in the same vein as for our new football boots collection.\\\\u201d So by rightsizing the market, rightsizing the volumes that are out there, we are extending and prolonging the life cycle of these silhouettes, which are very much the benefit of our product range and our product offer.\\\\u201d \\\\u00b7 Along with its most recent earnings, Puma also announced a new chief financial officer. WWD and Women\\'s Wear Daily are part of Penske Media Corporation. \\\\u00a9 2026 Fairchild Publishing, LLC. All Rights Reserved.\"}, {\"title\": \"Germany\\'s Puma margins rise despite weak sales in Q1 FY26 - Fibre2Fashion\", \"link\": \"https://www.fibre2fashion.com/news/apparel-news/germany-s-puma-margins-rise-despite-weak-sales-in-q1-fy26-310034-newsdetails.htm\", \"snippet\": \"\\\\u201cWe successful product launches such as the <strong>first-ever performance shoe made specifically for HYROX</strong>, as well as our federation kits for the FIFA World Cup,\\\\u201d noted Hoeld. Apparel sales increased by 0.9 per cent to \\\\u20ac546.3 million (~$0.64 ... The company\\'s revenue declined by 1 per cent to \\\\u20ac1,863.8 million (~$2.18 billion) in the first quarter (Q1) of fiscal 2026 (FY26). Adverse currency movements, particularly in the US dollar, Turkish lira and Argentine peso, weighed on performance, resulting in a reported sales decline of 6.3 per cent. Puma has reported a 1 per cent decline in Q1 FY26 revenue to \\\\u20ac1,863.8 million (~$2.18 billion), with a sharper 6.3 per cent drop on a reported basis due to currency headwinds. \\\\u201cWe successful product launches such as the first-ever performance shoe made specifically for HYROX, as well as our federation kits for the FIFA World Cup,\\\\u201d noted Hoeld. Apparel sales increased by 0.9 per cent to \\\\u20ac546.3 million (~$0.64 billion). In addition to golf and training, football also demonstrated robust performance, driven by sales of Puma jerseys for eleven teams, including Portugal, that have qualified for the FIFA World Cup 2026. German athletic apparel and footwear company Puma SE began 2026 with a measured performance, navigating currency pressures and softer demand in key markets while making steady progress on operational priorities, while improving profitability with a rise in gross margins. \\\\u201cOperationally, we were off to a solid start to our transition year in 2026. We have managed to reduce our inventory levels faster than planned, streamlined our product portfolio and addressed operational inefficiencies,\\\\u201d said Arthur Hoeld, chief executive officer (CEO) of Puma.\"}]' name='brave_search' tool_call_id='call_9LkAQsGZUjbPn7dPnX3hpGuc'",
+      "tool_names": [
+        "transfer_to_brave_scout",
+        "brave_search"
+      ]
+    },
+    {
+      "id": "Stop rule Brave search",
+      "layer": 2,
+      "category": "routing",
+      "notes": "Primarily tests the stop rule: tool_call_count must be exactly 1. Also tests directive compliance for brave_scout.",
+      "scenario_type": "stop_rule",
+      "question": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Zara: Monitor for new product launches in Europe or brand repositioning in Europe.",
+      "expected_output": null,
+      "answer": "1. **Executive Summary:** Zara has launched new product lines in Europe for the summer of 2026, including a collaboration with Havaianas. No brand repositioning has been reported.\n\n2. **Key Findings:**\n   - Zara introduced new summer products such as linen dresses, blouses, elevated sandals, and easy tailoring as part of their pre-summer collection in Europe (Published April 2026) [https://www.whowhatwear.com/fashion/shopping/zara-early-summer-arrivals-2026].\n   - Zara has collaborated with Havaianas for a new collection, which is expected to be popular in Europe (Published April 2026) [https://www.whowhatwear.com/fashion/summer/trendy/zara/items/summer/2026].\n\n3. **Competitive Implication:** The launch of new summer products and a collaboration with Havaianas could strengthen Zara's market position in Europe by attracting fashion-forward consumers and enhancing brand appeal.\n\n4. **Sources:**\n   1. https://www.whowhatwear.com/fashion/shopping/zara-early-summer-arrivals-2026\n   2. https://www.whowhatwear.com/fashion/summer/trendy/zara/items/summer/2026\n\n5. **Significance Score Reasoning:** This is a new development because Zara's product launches and collaboration with Havaianas are recent and have not been previously reported. The introduction of new products and partnerships represents incremental steps in Zara's market strategy.\n\n**SIGNIFICANCE_SCORE: 5**",
+      "latency_seconds": 6.65,
+      "agent_input_tokens": 4476,
+      "agent_output_tokens": 492,
+      "agent_total_tokens": 4968,
+      "judge_input_tokens": 9065,
+      "judge_output_tokens": 1263,
+      "judge_total_tokens": 10328,
+      "required_sections_present": 1.0,
+      "citation_presence": 1.0,
+      "significance_score_valid": 1.0,
+      "tool_call_count": 1,
+      "directive_compliance": 1.0,
+      "significance_score": null,
+      "score_in_expected_range": null,
+      "domain_exclusion_respected": 1.0,
+      "keyword_checks": {
+        "required_keyword_hit_rate": 1.0,
+        "disallowed_keyword_hits": 0
+      },
+      "judge_metrics": {
+        "answer_relevancy": {
+          "score": 0.86,
+          "reason": "The score is 0.86 because the mention of the collaboration with Havaianas distracts from the main focus on monitoring Zara's new product launches or brand repositioning in Europe.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "faithfulness": {
+          "score": 0.83,
+          "reason": "The score is 0.83 because the actual output inaccurately asserts that the product launches with Havaianas represent unreported developments, while the context indicates that the latest information is not confirmed.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "no_speculation": {
+          "score": 0.8,
+          "reason": "The output accurately reports that Zara has launched new product lines in Europe, including a collaboration with Havaianas, which aligns with the directive to monitor for new product launches. Both claims are factually supported by reliable sources within the retrieval context, substantiated by traceable URLs. However, the report does not mention any brand repositioning, even though the directive explicitly asked for monitoring in that area - which slightly detracts from fulfilling the complete directive. Overall, the alignment is strong, but the omission of brand repositioning affects the score.",
+          "passed": true,
+          "threshold": 0.5
+        }
+      },
+      "avg_judge_score": 0.83,
+      "report_length": 1379,
+      "recursion_limit_hit": 0,
+      "status": "PASS",
+      "failure_reasons": [],
+      "errors": [],
+      "tool_output": "Command(graph='__parent__', update={'messages': [HumanMessage(content=\"DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Zara: Monitor for new product launches in Europe or brand repositioning in Europe.\", additional_kwargs={}, response_metadata={}, id='534d8fd3-0641-4367-9dcb-733078205430')], 'remaining_steps': 24}, goto='brave_scout')\ncontent='[{\"title\": \"It\\'s Already Summer at Zara\\\\u201429 Trendy Items I Know Will Sell Out in 2 Weeks Flat\", \"link\": \"https://www.whowhatwear.com/fashion/summer/trendy/zara/items/summer/2026\", \"snippet\": \"Shopping If You&#x27;re Trying to Dress Better This Spring, These Stylish Zara Finds Scream European Chic \\\\u00b7 Trends These 3 Trends at Zara Will Be the Guaranteed Stars of Your Spring Highlight Reel \\\\u00b7 Shopping The New Aaron Levine x Zara Collection Just Dropped\\\\u201421 Items That Look Sleek and Cool \\\\u00b7 Shopping Mark My Words: These 32 Zara New Arrivals Will Sell Out Before April 1 \\\\u00b7 By Courtney Falsey published 25 April 2026 \\\\u00b7 Shopping If You\\'re Trying to Dress Better This Spring, These Stylish Zara Finds Scream European Chic \\\\u00b7 Trends These 3 Trends at Zara Will Be the Guaranteed Stars of Your Spring Highlight Reel \\\\u00b7 Shopping The New Aaron Levine x Zara Collection Just Dropped\\\\u201421 Items That Look Sleek and Cool \\\\u00b7 Shopping Mark My Words: These 32 Zara New Arrivals Will Sell Out Before April 1 \\\\u00b7 By Courtney Falsey published 25 April 2026 \\\\u00b7 Shopping Just So You Know, These New-In Zara Items for Summer Will Be Sold Out by May 15 \\\\u00b7 Shopping The New Summer 2026 Dresses Are Already Rolling In\\\\u2014I Have a Feeling These 37 Will Sell Out by June 1 We\\'re sure these 29 items will sell out fast. Not to mention Zara\\\\u2019s recent collaboration with everyone\\\\u2019s favorite flip-flop brand, Havaianas.\"}, {\"title\": \"Zara\\\\u2019s Chicest Pre-Summer Arrivals Are Here\\\\u201427 Pieces Destined to Sell Out | Who What Wear\", \"link\": \"https://www.whowhatwear.com/fashion/shopping/zara-early-summer-arrivals-2026\", \"snippet\": \"Shopping If You&#x27;re Trying to Dress Better This Spring, These Stylish Zara Finds Scream European Chic \\\\u00b7 Zara\\\\u2019s latest pre-summer drop is full of chic warm-weather staples, from linen dresses and blouses to elevated sandals and easy tailoring. By Marina Avraam published 28 April 2026 \\\\u00b7 Zara\\\\u2019s latest pre-summer drop is full of chic warm-weather staples, from linen dresses and blouses to elevated sandals and easy tailoring. Shop here. Shopping If You\\'re Trying to Dress Better This Spring, These Stylish Zara Finds Scream European Chic \\\\u00b7 Zara\\\\u2019s latest pre-summer drop is full of chic warm-weather staples, from linen dresses and blouses to elevated sandals and easy tailoring. By Marina Avraam published 28 April 2026 \\\\u00b7 Shopping Zara\\'s New Arrivals Are Looking Extra Tempting RN\\\\u2014These 32 Will Sell Out by May 1 \\\\u00b7 Shopping The New Summer 2026 Dresses Are Already Rolling In\\\\u2014I Have a Feeling These 37 Will Sell Out by June 1 The linen has been pulled back out (along with my questionable ironing skills), toes are officially back on show, and a light jacket is all the outerwear we need right now. Naturally, Zara is already one step ahead, delivering some of the chicest early-summer pieces just in time for a wardrobe refresh.\"}, {\"title\": \"Zara (retailer) - Wikipedia\", \"link\": \"https://en.wikipedia.org/wiki/Zara_(retailer)\", \"snippet\": \"Under its Zara Home line, Zara launched what is believed to be <strong>the first detergent that reduces the abrasion of textile microfibres during washing</strong>. It is claimed the solution, jointly developed by Inditex and BASF Home Care and I&amp;I Solutions Europe in Spain and Germany, can reduce the release ... Under its Zara Home line, Zara launched what is believed to be the first detergent that reduces the abrasion of textile microfibres during washing. It is claimed the solution, jointly developed by Inditex and BASF Home Care and I&I Solutions Europe in Spain and Germany, can reduce the release of microfibres by up to 80 percent, depending on fabric type and washing conditions. Reportedly, Zara needs just one week to develop a new product and get it to stores, compared to the six-month industry average, and makes roughly 40,000 designs of which around 12,000 new designs are selected and produced each year. In November 2022, a pre-owned platform will also be launched via its website and app in UK. Other than posting now-unwanted Zara purchases online for sale, shoppers can book repairs and donate unwanted items online or via a store. If successful, this service will be expanded to other key markets. Starting November 2022, Russians will be able to order products online from a range U.S. and European brands, including Nike, Zara and H&M, according to an announcement from Russia\\'s postal service. In Europe, the brand planned to cut the number of retail locations beginning in 2020. In 2021, Zara left Venezuela by the economic struggles in the country. As of January 2023, the clothing retailer has nearly 3000 stores, including its kids and home stores. Spanning over 96 countries and continuing to grow. In April 2023, Zara left Russia by selling the business to Fashion and More Management DVCC. In April 2022, it was reported that Zara had taken legal action against \\\\\"Tara Sartoria\\\\\", a small clothing company owned by Vietnamese citizen Tara Nguyen. Nguyen\\'s company sells products made by disadvantaged women in Indonesia and Vietnam. Zara (/\\\\u02c8z\\\\u0251\\\\u02d0r\\\\u0259/; Spanish: [\\\\u02c8\\\\u03b8a\\\\u027ea]) is a Spanish fast fashion retail subsidiary of the Spanish multinational fashion design, manufacturing, and retailing group Inditex. Zara sells clothing, accessories, beauty products and perfumes. The head office is located at Arteixo in the province of A Coru\\\\u00f1a, Spain. In 2020 alone, it launched over twenty new product lines.\"}, {\"title\": \"Zara New Arrivals: Spring Outfits for Work & Travel\", \"link\": \"https://www.refinery29.com/en-us/best-zara-new-arrivals\", \"snippet\": \"From spring styles to timeless pieces, Zara&#x27;s new arrivals offer updates for spring weddings, vacations, festival season, the office, and everyday wear. Last Updated April 28, 2026, 5:34 PM \\\\u00b7 All linked products are independently selected by our editors. If you purchase any of these products, we may earn a commission. Photo: Courtesy of Zara. Zara\\\\u2019s latest arrivals are a welcomed reminder that spring is finally here \\\\u2014 so your wardrobe should start acting like it. Funnel-neck coats were a big winter jacket trend, and the silhouette has slid into the spring too, as we can see in Zara\\'s selection. Goth girl spring is also here, so if you\\'re looking for something edgier, you can find your new (faux) leather jacket at Zara. ... All linked products are independently selected by our editors. How To Get Zara Larsson\\\\u2019s Midnight Sun Look For Summer 202... All linked products are independently selected by our editors. If you purchase any of these products, we may earn a commission. All linked products are independently selected by our editors. If you purchase any of these products, we may earn a commission. Zara\\\\u2019s latest arrivals ar\"}, {\"title\": \"27 Chic Zara New Arrivals Just in Time for Warm Weather | Who What Wear\", \"link\": \"https://www.whowhatwear.com/fashion/shopping/best-zara-arrivals-may-2026\", \"snippet\": \"Shopping Mark My Words: These 32 Zara New Arrivals Will Sell Out Before April 1 Shopping If You\\'re Trying to Dress Better This Spring, These Stylish Zara Finds Scream European Chic \\\\u00b7 Shopping Fine, I\\'ll Spill\\\\u201433 Spring Dresses From Free People, Zara, and Revolve That Will Get You Stopped in the Streets \\\\u00b7 Shopping 30 Trendy New Zara Items I Know Will Go Viral Before Spring Starts \\\\u00b7 Spring I Went Through Every Spring Trend for 2026\\\\u2014These Are the Ones I\\'m Shopping to Look Chic Shopping Mark My Words: These 32 Zara New Arrivals Will Sell Out Before April 1 With spring in full swing and summer right around the corner, now is a great time to ensure your closet is stocked with a mix of on-trend and classic styles for the months ahead. Recently, I took a look at Zara\\'s latest spring arrivals, and I couldn\\'t help but notice so many amazing items. As a shopping editor, I strive to take all the hard work out of refreshing your closet, so you know I included some serious hits, from gorgeous dresses perfect for your next getaway to a slew of cool spring accessories to top off your favorite looks. Zara seems to have a little something for every kind of fashion person.\"}]' name='brave_search' tool_call_id='call_92nePeAm3LKvy6FhB8x6SEOG'",
+      "tool_names": [
+        "transfer_to_brave_scout",
+        "brave_search"
+      ]
+    },
+    {
+      "id": "Directive Tavily",
+      "layer": 2,
+      "category": "routing",
+      "notes": "Tests that the tavily_analyst sub-agent is called when directed, not brave_scout.",
+      "scenario_type": "directive_tavily",
+      "question": "DIRECTIVE: Use 'tavily_analyst' only. TODAY: April 23, 2026. Research H&M: Monitor for new product launches in Europe or brand repositioning in Europe.",
+      "expected_output": null,
+      "answer": "1. **Executive Summary**: H&M has launched a new collection of women's coats and jackets in Europe, but there is no new information on brand repositioning in the region.\n\n2. **Key Findings**:\n   - H&M has updated its collection of women's coats and jackets, offering a variety of styles including warm puffers and elegant long wool coats. This update is part of their ongoing product offerings in Europe (Published April 2026) [H&M GB](https://www2.hm.com/en_gb/ladies/shop-by-product/jackets-and-coats.html?page=19&srsltid=AfmBOorFhjHvHZQtYJVEUA7M2uWeFoQ5Kxdwi7sRQ73ehtK_m_gH84EZ).\n\n3. **Competitive Implication**: The launch of new products in the women's coats and jackets category could enhance H&M's market position in Europe by attracting fashion-conscious consumers looking for seasonal updates. However, without any brand repositioning, the overall strategic direction remains unchanged.\n\n4. **Sources**:\n   1. [H&M GB](https://www2.hm.com/en_gb/ladies/shop-by-product/jackets-and-coats.html?page=19&srsltid=AfmBOorFhjHvHZQtYJVEUA7M2uWeFoQ5Kxdwi7sRQ73ehtK_m_gH84EZ)\n\n5. **Significance Score Reasoning**: This is an existing development because the update to the product line is part of H&M's regular seasonal offerings, and there is no indication of a strategic shift or brand repositioning. Therefore, the significance score is 3.\n\nSIGNIFICANCE_SCORE: 3",
+      "latency_seconds": 10.75,
+      "agent_input_tokens": 5351,
+      "agent_output_tokens": 675,
+      "agent_total_tokens": 6026,
+      "judge_input_tokens": 5967,
+      "judge_output_tokens": 1100,
+      "judge_total_tokens": 7067,
+      "required_sections_present": 1.0,
+      "citation_presence": 1.0,
+      "significance_score_valid": 1.0,
+      "tool_call_count": 1,
+      "directive_compliance": 1.0,
+      "significance_score": null,
+      "score_in_expected_range": null,
+      "domain_exclusion_respected": 1.0,
+      "keyword_checks": {
+        "required_keyword_hit_rate": 1.0,
+        "disallowed_keyword_hits": 0
+      },
+      "judge_metrics": {
+        "answer_relevancy": {
+          "score": 0.7,
+          "reason": "The score is 0.70 because while the response offers some relevant information about H&M, it contains several irrelevant statements that do not pertain to product launches or brand repositioning, which were the focal points of the input. These irrelevant comments detracted from the overall effectiveness of the response.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions present, indicating that the actual output perfectly aligns with the retrieval context.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "no_speculation": {
+          "score": 0.5,
+          "reason": "The evaluation reveals that the claim about H&M launching a new collection of women's coats and jackets in Europe is substantiated by a valid source from the H&M website, matching the parameters in the directive. However, the report fails to provide any sourced information regarding brand repositioning, resulting in a lack of comprehensive coverage of the directive. This led to an incomplete view of H&M's activities as stipulated. Additionally, while the output is generally fact-based without speculation, the absence of supportive details for the critical aspect of brand repositioning is a significant shortcoming.",
+          "passed": true,
+          "threshold": 0.5
+        }
+      },
+      "avg_judge_score": 0.73,
+      "report_length": 1362,
+      "recursion_limit_hit": 0,
+      "status": "PASS",
+      "failure_reasons": [],
+      "errors": [],
+      "tool_output": "Command(graph='__parent__', update={'messages': [HumanMessage(content=\"DIRECTIVE: Use 'tavily_analyst' only. TODAY: April 23, 2026. Research H&M: Monitor for new product launches in Europe or brand repositioning in Europe.\", additional_kwargs={}, response_metadata={}, id='489e1f3a-7f64-4587-8c0c-4562363527a3')], 'remaining_steps': 24}, goto='tavily_analyst')\ncontent='{\"query\": \"H&M new product launches Europe April 2026\", \"follow_up_questions\": null, \"answer\": null, \"images\": [], \"results\": [{\"url\": \"https://www2.hm.com/en_gb/ladies/shop-by-product/jackets-and-coats.html?page=19&srsltid=AfmBOorFhjHvHZQtYJVEUA7M2uWeFoQ5Kxdwi7sRQ73ehtK_m_gH84EZ\", \"title\": \"Women\\'s Coats & Jackets | Leather, Trench & Winter | H&M GB\", \"content\": \"Update your outerwear with our women\\'s coats and jackets at H&M. Find everything from warm puffers to elegant long wool coats. Browse all styles.\", \"score\": 0.1366893, \"raw_content\": null}, {\"url\": \"https://www2.hm.com/en_my/ladies/accessories/bags.html?page=2\", \"title\": \"Women\\'s Bags | Handbag, Tote, Beach & Crossbody | H&M MY\", \"content\": \"Shop the full collection of women\\'s bags at H&M. Choose from classic handbags, backpacks, clutch bags and crossbody styles in plenty of colours.\", \"score\": 0.110327505, \"raw_content\": null}, {\"url\": \"https://www2.hm.com/en_my/ladies/shop-by-product/maternity-wear/best-basics.mobileapp.html?page=159\", \"title\": \"Basics | H&M MY\", \"content\": \"At H&M you can find a wide variety of best basic maternity wear. Shop the latest maternity wear trends online or in-store.\", \"score\": 0.0784517, \"raw_content\": null}], \"response_time\": 0.0, \"request_id\": \"479f844a-7289-49fc-9f98-7bb394174b86\"}' name='tavily_search' tool_call_id='call_8TDRUt83qXDQ9fHLiVjZi7xn'\ncontent=\"No search results found for 'H&M brand repositioning Europe April 2026'. Suggestions: Remove time_range argument, Remove include_domains argument. Try modifying your search parameters with one of these approaches.\" name='tavily_search' tool_call_id='call_ra0YuS4HI9b6KpC9MYhitGzP' status='error'",
+      "tool_names": [
+        "transfer_to_tavily_analyst",
+        "tavily_search",
+        "tavily_search"
+      ]
+    },
+    {
+      "id": "Citation required Brave search",
+      "layer": 2,
+      "category": "format",
+      "notes": "All Key Findings bullets must end with a real URL. Tests citation_presence metric. No placeholder URLs allowed.",
+      "scenario_type": "citation_required",
+      "question": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Uniqlo: Monitor for new product launches in Europe or brand repositioning in Europe.",
+      "expected_output": null,
+      "answer": "1. **Executive Summary**: Uniqlo is actively expanding its retail presence in Europe with new store openings in France and the UK, alongside launching new products tailored for the European market.\n\n2. **Key Findings**:\n   - Uniqlo plans to open a new store in Cannes, France, in autumn 2026, as part of its strategy to expand across Europe with around fifteen openings planned for the 2026 financial year (https://ww.fashionnetwork.com/news/Uniqlo-continues-expansion-in-france-announcing-new-store-in-cannes,1827431.html).\n   - A new Uniqlo store is set to open at the Trafford Centre in Manchester, UK, marking the first city outside of London to have two Uniqlo locations (https://www.theindustry.fashion/in-review-april-2026-headline-highlights-from-uniqlo-clarks-marella-and-more/).\n   - Uniqlo has launched new products for the 2026 season, including a Cotton Striped Short Shirt Dress, Nylon Culottes, and a Linen Vest made from European-grown linen (https://graziadaily.co.uk/fashion/shopping/uniqlo-what-to-buy-new/).\n\n3. **Competitive Implication**: The expansion of Uniqlo's retail footprint in key European markets like France and the UK, coupled with the introduction of new products, suggests a strategic push to increase market share and brand presence in Europe. This could intensify competition with other fashion retailers in the region.\n\n4. **Sources**:\n   1. https://ww.fashionnetwork.com/news/Uniqlo-continues-expansion-in-france-announcing-new-store-in-cannes,1827431.html\n   2. https://www.theindustry.fashion/in-review-april-2026-headline-highlights-from-uniqlo-clarks-marella-and-more/\n   3. https://graziadaily.co.uk/fashion/shopping/uniqlo-what-to-buy-new/\n\n5. **Significance Score Reasoning**: This is a new development because Uniqlo is actively expanding its physical presence in Europe with new store openings and product launches, which were not previously reported. The strategic expansion and product introduction are significant steps in strengthening its market position in Europe.\n\nSIGNIFICANCE_SCORE: 7",
+      "latency_seconds": 8.61,
+      "agent_input_tokens": 4705,
+      "agent_output_tokens": 835,
+      "agent_total_tokens": 5540,
+      "judge_input_tokens": 9664,
+      "judge_output_tokens": 1206,
+      "judge_total_tokens": 10870,
+      "required_sections_present": 1.0,
+      "citation_presence": 1.0,
+      "significance_score_valid": 1.0,
+      "tool_call_count": 1,
+      "directive_compliance": 1.0,
+      "significance_score": null,
+      "score_in_expected_range": null,
+      "domain_exclusion_respected": 1.0,
+      "keyword_checks": {
+        "required_keyword_hit_rate": 1.0,
+        "disallowed_keyword_hits": 0
+      },
+      "judge_metrics": {
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the response directly addressed the input without any irrelevant statements.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "faithfulness": {
+          "score": 0.83,
+          "reason": "The score is 0.83 because the actual output incorrectly claims a 'Linen Vest made from European-grown linen' as a new product from Uniqlo, which is not referenced in the retrieval context.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "no_speculation": {
+          "score": 0.8,
+          "reason": "The claims in the Key Findings are mostly supported by legitimate sources provided, allowing for clear tracing back to the search results. However, the URL for the first claim has a typo ('ww' instead of 'www'), which raises concerns about its credibility. The claims maintain coherence and track factual developments; however, the slight URL issue impacts the overall alignment. Thus, it is marked down for that shortcoming.",
+          "passed": true,
+          "threshold": 0.5
+        }
+      },
+      "avg_judge_score": 0.88,
+      "report_length": 2041,
+      "recursion_limit_hit": 0,
+      "status": "PASS",
+      "failure_reasons": [],
+      "errors": [],
+      "tool_output": "Command(graph='__parent__', update={'messages': [HumanMessage(content=\"DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Uniqlo: Monitor for new product launches in Europe or brand repositioning in Europe.\", additional_kwargs={}, response_metadata={}, id='201d0916-f7d6-43ad-99c5-ff2e41ad4c0b')], 'remaining_steps': 24}, goto='brave_scout')\ncontent='[{\"title\": \"In Review, April 2026: Headline highlights from Uniqlo, Lefties, Garage and more... - TheIndustry.fashion\", \"link\": \"https://www.theindustry.fashion/in-review-april-2026-headline-highlights-from-uniqlo-clarks-marella-and-more/\", \"snippet\": \"Now selling both its men\\\\u2019s and women\\\\u2019s collections, it marks the brand\\\\u2019s first store in the UK and second in Europe, following an opening in Milan last year. In Pictures: Alexandra Miro unveils first pop-up store in London\\\\u2019s Notting Hill \\\\u00b7 London-based designer Alexandra Miro, who specialises in luxury swimwear and resort wear, including dresses, opened a new 430 sq ft pop-up store at 85 Ledbury Road in London\\\\u2019s Notting Hill, set to run until 19 July 2026. Uniqlo is expanding its presence in the North West and opening a new store at the Trafford Centre later this year, making Manchester the first city outside of London to have two Uniqlo locations. Longchamp turns Sloane Square into a surf-inspired pop-up \\\\u00b7 Longchamp launched a temporary pop-up experience in Sloane Square, introducing a surf-inspired concept infused with Parisian style. Now selling both its men\\\\u2019s and women\\\\u2019s collections, it marks the brand\\\\u2019s first store in the UK and second in Europe, following an opening in Milan last year. In Pictures: Alexandra Miro unveils first pop-up store in London\\\\u2019s Notting Hill \\\\u00b7 London-based designer Alexandra Miro, who specialises in luxury swimwear and resort wear, including dresses, opened a new 430 sq ft pop-up store at 85 Ledbury Road in London\\\\u2019s Notting Hill, set to run until 19 July 2026. New Balance leads sportswear brands creating events for London Marathon \\\\u00b7 In History: The growth of Primark as a leader in value fashion retail \\\\u00b7 Why markdown management has become fashion retail\\'s most urgent conversation \\\\u00b7 Red, black and white dominate the Devil Wears Prada 2 premiere as cast channel method dressing \\\\u00b7 From Zalando to Christian Louboutin: Shoptalk Europe 2026 spotlights AI and customer connection Once again, TheIndustry.fashion reflects on a headline-grabbing month in British retail and beyond, highlighting new openings, key insights into retail and footfall, and in-depth industry analysis. Uniqlo\\'s retail expansion heats up with second Manchester store opening planned\"}, {\"title\": \"Here\\'s What To Buy Now From Uniqlo\\'s New Arrivals For 2026\", \"link\": \"https://graziadaily.co.uk/fashion/shopping/uniqlo-what-to-buy-new/\", \"snippet\": \"Summer dressing has never been so easy, as Uniqlo&#x27;s <strong>Cotton Striped Short Shirt Dress</strong> is a simple transitional piece that&#x27;ll take you through spring paired with chunky boots and through to summer styled with ballet flats. Uniqlo\\'s bra dresses are a saviour come the warmer months, as it comes with an in-built bra that offers 360-degree support and a secure fit. ... I didn\\'t have culottes making a return on my 2026 sartorial bingo card, but Uniqlo has just released a pair of Nylon Culottes which I expect will be cropping up on your socials very shortly. Summer dressing has never been so easy, as Uniqlo\\'s Cotton Striped Short Shirt Dress is a simple transitional piece that\\'ll take you through spring paired with chunky boots and through to summer styled with ballet flats. ... Made from European-grown linen, this Linen Vest comes in a variety of different colours and features a smart button-down front that\\'s perfect for wearing to the office with a pair of wide-leg trousers. Cool girls aren\\'t wearing their linen shirts on their own this year. Oh no, they\\'re layering one on top of the other for a chic pastel look. Layer the pink striped Uniqlo shirt over the blue and finish your outfit with a pair of cream trousers. Gingham isn\\'t going anywhere, and this summer it\\'s decorating everything from trousers to maxi skirts. Last year, Uniqlo\\'s Tiered Maxi Skirt was a best-seller, and I\\'m expecting it to have a similar fate this year.\"}, {\"title\": \"Uniqlo\\'s Beloved Budget T-Shirt Based on Vintage Military Surplus Gets an Overdue Sequel\", \"link\": \"https://www.gearpatrol.com/style/uniqlo-u-v-neck-t-shirt/\", \"snippet\": \"Turns out, the <strong>Uniqlo U Crew Neck T-Shirt</strong> isn\\\\u2019t game over but game on, as the retailer just issued an official sequel to the beloved basic. ... Newly launched ahead of summer, the Uniqlo U V-Neck T-Shirt trades rounded crew neck for a pointed ... Uniqlo \\\\u00b7 By Jack Seemer \\\\u00b7 Published April 29, 2026 \\\\u00b7 \\\\u00b7 Share \\\\u00b7 If you buy from a link, we may earn a commission. Learn more \\\\u00b7 \\\\u201cGame over.\\\\u201d \\\\u00b7 Thus was the verdict from Michael Kristy, a.k.a. The Iron Snail, when reviewing the Uniqlo U Crew Neck T-Shirt last year. Turns out, the Uniqlo U Crew Neck T-Shirt isn\\\\u2019t game over but game on, as the retailer just issued an official sequel to the beloved basic. ... Newly launched ahead of summer, the Uniqlo U V-Neck T-Shirt trades rounded crew neck for a pointed neckline, giving the garment a slightly dressier appearance ideal for layering. The Uniqlo V-Neck T-Shirt is available now in seven colorways. It costs $25, the same price as the crew-neck version. ... Jack Seemer is the executive editor at Gear Patrol, with over a decade of experience in product journalism. Uniqlo\\\\u2019s New Dupe of a Legendary Levi\\\\u2019s Jacket Is Vintage Americana on the Cheap \\\\u00b7 Want to stay up to date on the latest product news and releases?\"}, {\"title\": \"UNIQLO Discount Code \\\\u2192 Reward in April 2026\", \"link\": \"https://www.vouchercloud.com/uniqlo-vouchers\", \"snippet\": \"Subscribe to UNIQLO&#x27;s text alerts to be first to know about new offers and product launches. Don\\'t miss our latest pieces for the new season: new tops, graphic T-shirts and versatile wardrobe staples newly launched at UNIQLO. Cannot be used in conjunction with any other offer ... Download the UNIQLO App for an easier way to shop LifeWear. New to the app? Get \\\\u00a310 off your first order of \\\\u00a370 or more. ... Install the UNIQLO app to shop the latest LifeWear \\\\u2014 new app users can receive \\\\u00a310 off their first purchase when they spend \\\\u00a370 or more. Cannot be used in conjunction with any other offer ... Choose our Pick Up Today service from the product page and collect your order from your chosen store in as little as 2 hours. Subscribe to UNIQLO\\'s text alerts to be first to know about new offers and product launches. Subscribe to UNIQLO\\'s text service to be first in line for new offers and product launches. Save on High Rise Regular Jeans at UNIQLO \\\\u2014 currently \\\\u00a324.90 (previously \\\\u00a334.90) as a sale item. Cannot be used in conjunction with any other offer ... Just launched \\\\u2014 discover the new season collection including versatile tops, graphic T-shirts and more.\"}, {\"title\": \"Uniqlo continues expansion in France, announcing new store in Cannes - FashionNetwork\", \"link\": \"https://ww.fashionnetwork.com/news/Uniqlo-continues-expansion-in-france-announcing-new-store-in-cannes,1827431.html\", \"snippet\": \"News distribution : <strong>The Japanese retailer has announced it will open a new store in Cannes in autumn 2026</strong>. The opening forms part of its strategy to strengthen its footprint in France and its broader expansion across Europe. For Uniqlo, expansion in France remains a key growth lever, alongside an equally robust rollout across Europe. The Japanese brand has announced the opening of a new store in Cannes in autumn 2026, confirming its strategy of establishing a foothold in high-appeal locations. This move forms part of a broader momentum already at work in the French market. As noted at the start of the year, Uniqlo continues to densify its network, with several projects in progress. This strategy extends beyond the French market, with around fifteen openings planned in Europe for the 2026 financial year. Alongside brands such as Comptoir des Cotonniers and Theory, Uniqlo remains the group\\'s primary growth driver, fuelled both by an international expansion strategy and a clearly differentiated product positioning. This momentum is particularly visible in Europe, where the region now accounts for more than 13% of the brand\\'s sales, compared with 11% a year earlier, confirming the acceleration of the European market in the group\\'s trajectory. Copyright \\\\u00a9 2026 FashionNetwork.com All rights reserved.\"}]' name='brave_search' tool_call_id='call_2uu4Y1KySnQWYtdRdPhqJDKd'",
+      "tool_names": [
+        "transfer_to_brave_scout",
+        "brave_search"
+      ]
+    },
+    {
+      "id": "Minor update Brave search",
+      "layer": 2,
+      "category": "delta_scoring",
+      "notes": "Known expansion plan, minor new detail (specific cities). Score must be 3-5 — not 1-2 (something new) and not 6+ (not a major new entity).",
+      "scenario_type": "minor_update",
+      "question": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Mango: Monitor for new product launches in Europe or brand repositioning in Europe.",
+      "expected_output": null,
+      "answer": "1. **Executive Summary:** Mango is actively expanding its retail presence and brand offerings in Europe. The company is focusing on increasing its Home concept stores in Spain, launching a new collaborative collection, and expanding its store footprint in Poland.\n\n2. **Key Findings:**\n   - Mango plans to open over ten new Home concept stores in Spain in 2026, targeting regions like Andalusia, the Basque Country, and the Valencian region (Published April 20, 2026, https://www.retaildetail.eu/news/home/mango-to-open-over-six-more-home-stores-in-2026/).\n   - A new collection in collaboration with Eckhaus Latta will launch on June 4, 2026, available online and in selected stores as part of Mango Collective (Published April 21, 2026, https://www.drapersonline.com/news/mango-announces-new-collection-with-eckhaus-latta).\n   - Mango is expanding in Poland with new store openings in Warsaw and Poznań, integrating Women's and Men's wear in single locations (Published April 19, 2026, https://retailboss.co/mango-expands-poland-warsaw-poznan-openings/).\n\n3. **Competitive Implication:** These expansions and collaborations indicate Mango's strategic efforts to strengthen its market position in Europe. By increasing its physical presence and diversifying its product offerings, Mango is likely to enhance its brand visibility and customer engagement in key European markets.\n\n4. **Sources:**\n   1. https://www.retaildetail.eu/news/home/mango-to-open-over-six-more-home-stores-in-2026/\n   2. https://www.drapersonline.com/news/mango-announces-new-collection-with-eckhaus-latta\n   3. https://retailboss.co/mango-expands-poland-warsaw-poznan-openings/\n\n5. **Significance Score Reasoning:** This is a new development because Mango is actively launching new stores and collections, which were not previously reported. The expansion into new regions and the introduction of a collaborative collection represent significant strategic moves. Therefore, the significance score is 7.\n\n**SIGNIFICANCE_SCORE: 7**",
+      "latency_seconds": 7.8,
+      "agent_input_tokens": 4526,
+      "agent_output_tokens": 742,
+      "agent_total_tokens": 5268,
+      "judge_input_tokens": 9392,
+      "judge_output_tokens": 1583,
+      "judge_total_tokens": 10975,
+      "required_sections_present": 1.0,
+      "citation_presence": 1.0,
+      "significance_score_valid": 1.0,
+      "tool_call_count": 1,
+      "directive_compliance": 1.0,
+      "significance_score": null,
+      "score_in_expected_range": null,
+      "domain_exclusion_respected": 1.0,
+      "keyword_checks": {
+        "required_keyword_hit_rate": 1.0,
+        "disallowed_keyword_hits": 0
+      },
+      "judge_metrics": {
+        "answer_relevancy": {
+          "score": 0.64,
+          "reason": "The score is 0.64 because there are several statements that detail specific activities in Spain and Poland that do not relate to the broader inquiry about Mango's product launches or brand repositioning across Europe.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context, indicating perfect alignment and accuracy.",
+          "passed": true,
+          "threshold": 0.5
+        },
+        "no_speculation": {
+          "score": 0.7,
+          "reason": "The response provides specific and factual claims about Mango's activities, such as the opening of Home concept stores in Spain and the launch of a new collection in collaboration with Eckhaus Latta. Each claim is supported by valid sources from the Retrieval Context, confirming the accuracy of the information. However, while most details align with the retrieved sources, the overall narrative and implications presented in the Competitive Implication section, while valid, do not directly trace back to a specific source. Additionally, the statement of a significance score lacks a clear justification referencing specific claims or their relevance. Therefore, the response is accurate but lacks full coherence in source validation for the overall implications.",
+          "passed": true,
+          "threshold": 0.5
+        }
+      },
+      "avg_judge_score": 0.78,
+      "report_length": 2004,
+      "recursion_limit_hit": 0,
+      "status": "PASS",
+      "failure_reasons": [],
+      "errors": [],
+      "tool_output": "Command(graph='__parent__', update={'messages': [HumanMessage(content=\"DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Mango: Monitor for new product launches in Europe or brand repositioning in Europe.\", additional_kwargs={}, response_metadata={}, id='f5ee0681-3b46-443b-a597-f2fd009ea72a')], 'remaining_steps': 24}, goto='brave_scout')\ncontent='[{\"title\": \"Mango to open over six more Home stores in 2026 - RetailDetail EU\", \"link\": \"https://www.retaildetail.eu/news/home/mango-to-open-over-six-more-home-stores-in-2026/\", \"snippet\": \"After opening its first four standalone stores in 2025\\\\u2014two in Barcelona, one in Zaragoza, and another in Madrid\\\\u2014<strong>Mango Home</strong> will make its debut in three new regions. It will expand to Andalusia with a store in Granada, located in the Nevada ... After opening its first four standalone stores in 2025\\\\u2014two in Barcelona, one in Zaragoza, and another in Madrid\\\\u2014Mango Home will make its debut in three new regions. It will expand to Andalusia with a store in Granada, located in the Nevada shopping center; to the Basque Country with a store in Bilbao; and to the Valencian region with a store in the city of Valencia. ... More about... Home See more \\\\u00b7 Home15 April, 2026Jysk opens six new stores in a single day in the Benelux Home13 April, 2026Maisons du Monde launches new concept in Spain as financial pressure mounts Home13 April, 2026Leen Bakker and Kwantum promise to keep their doors open \\\\u00b7 The future of Leen Bakker and Kwantum appears to be secure for the time being. Parent company Homefashion Group has reassured (Dutch) customers and employees that no further store closures are planned in the near future. ... Fashion1 April, 2026Calvin Klein and Tommy Hilfiger are driving PVH Corp.\\\\u2019s numbers, as company sees its profits dwindle Mango is accelerating the expansion of its Home concept and plans to open more than ten stores in Spain.\"}, {\"title\": \"Mango announces new collection with Eckhaus Latta\", \"link\": \"https://www.drapersonline.com/news/mango-announces-new-collection-with-eckhaus-latta\", \"snippet\": \"Launching on <strong>4 June</strong>, the collection will be available online globally and in selected stores. It forms part of Mango Collective, its platform for highlighting emerging brands. Mango and the New York and Los Angeles-based label Eckhaus Latta have paired up to launch a capsule collection. Crocs has reported a decline in first-quarter revenues and operating profit, despite continued growth in international markets, including Europe. Operating profit at Puma was up 19.6% year on year to \\\\u20ac51.9m (\\\\u00a344.9m) in 12 weeks 30 April 2026, despite a 1% dip in sales to \\\\u20ac1.86bn (\\\\u00a31.61bn) on an adjusted currency basis. The new launch is part of Mango\\\\u2019s strategic plan for 2024-26 which focuses brand elevation and consumer engagement. Mango announced the appointment of Est\\\\u00e9e Lauder executive Sara Donninelli as chief brand officer on 16 March. Donninelli has over 20 years experience in the cosmetic and luxury fragrance sector. On 23 March, the brand opened a store on London\\\\u2019s Kings Road. On 3 April, the brand opened its first Cheltenham store. Launching on 4 June, the collection will be available online globally and in selected stores. It forms part of Mango Collective, its platform for highlighting emerging brands.\"}, {\"title\": \"Mango Expands Its Polish Presence With Two New Store Openings In Warsaw And Pozna\\\\u0144\", \"link\": \"https://retailboss.co/mango-expands-poland-warsaw-poznan-openings/\", \"snippet\": \"The combined Women\\\\u2019s Wear and Men\\\\u2019s Wear format at <strong>Avenida Pozna\\\\u0144</strong> is part of a wider move by the brand to consolidate its product offer within single locations where possible, improving efficiency and deepening the customer experience across ... The combined Women\\\\u2019s Wear and Men\\\\u2019s Wear format at Avenida Pozna\\\\u0144 is part of a wider move by the brand to consolidate its product offer within single locations where possible, improving efficiency and deepening the customer experience across categories. The shift also reflects a growing confidence in Menswear as a commercial pillar for Mango, a line that has been expanding steadily across the brand\\\\u2019s European store network in recent years. Mango\\\\u2018s Central European expansion sits alongside a highly active 2026 opening program across the continent. The Avenida Pozna\\\\u0144 opening is particularly notable as it marks a new format for the brand in the city, housing both Women\\\\u2019s wear and Men\\\\u2019s wear under one roof, a move that reflects Mango\\\\u2018s growing ambition to present its full lifestyle offer in key Central European markets. The Poland openings are part of a broader expansion drive that saw Mango open more than 260 stores worldwide in 2025 alone, ending the year with 2,931 points of sale across more than 120 markets globally. The Barcelona based brand has set an ambitious target of nearly \\\\u20ac4 billion in revenue for 2026, following record revenues of \\\\u20ac3.767 billion in 2025, a 13% year on year increase. In the UK, the brand has announced 15 new store openings planned for the year, following 25 openings in 2025, with new locations targeting Cheltenham, Chester, Leeds, and Guildford. The Poland additions signal that the appetite for physical retail growth remains just as strong in Central Europe as it does in the brand\\\\u2019s more established Western markets. Credit: Mango / LinkedIn. Credit: Mango / LinkedIn. Credit: Mango / LinkedIn.\"}, {\"title\": \"Mango to open 10 new stores in Turkey | Retail Bulletin\", \"link\": \"https://www.theretailbulletin.com/fashion/mango-to-open-10-new-stores-in-turkey-30-04-2026/\", \"snippet\": \"Mango is to expand further in Turkey with the opening of around ten new stores in 2026. This means it will have 80 points of sale in the country by the end of the year. Growth will mainly be focused on Istanbul and Ankara and will also include the renovation of around five points of Huseyin Golcukhe, international retail director for MENAI, Turkey and Asia at Mango, said: \\\\u201cWe opened our first store in T\\\\u00fcrkiye almost three decades ago and over the years we have built a strong bond with our customers. \\\\u201cOur new store investments in 2026 will allow us to bring our Mediterranean-inspired collections closer to our customers and are a clear reflection of our confidence in Turkey and our long-term commitment to the market.\\\\u201d The expansion forms part of Mango\\\\u2019s 2024\\\\u20132026 strategic plan, which includes initiatives to accelerate growth across in both its physical and online channels.\"}, {\"title\": \"Mango plans ten new T\\\\u00fcrkiye stores in 2026\", \"link\": \"https://www.retail-insight-network.com/news/mango-plans-ten-new-turkiye-stores/\", \"snippet\": \"Spanish fashion retailer Mango said it intends to open <strong>around ten new stores in T\\\\u00fcrkiye in 2026</strong>, which would lift its total number of outlets in the country to 80 by the end of the year. During the year, Mango posted nearly 20% growth in turnover in the market, opened six new locations and completed almost ten refurbishment projects. The 2026 investment is part of the company\\\\u2019s 2024\\\\u20132026 4E Strategic Plan, which is intended to expedite growth in both brick-and-mortar retail and online sales. The 4E plan aims to achieve a turnover of more than \\\\u20ac4bn by 2026, through a differentiated value proposition, with a strong expansion drive and by improving sales in its existing store network and in its online channel. Mango entered the Turkish market in 1997 and finished 2025 with more than 70 points of sale in the country. Mango Middle East, North Africa and India (MENAI), Turkey and Asia international retail director Huseyin Golcuk said: \\\\u201cWe opened our first store in T\\\\u00fcrkiye almost three decades ago and over the years we have built a strong bond with our customers. \\\\u201cOur new store investments in 2026 will allow us to bring our Mediterranean-inspired collections closer to our customers and are a clear reflection of our confidence in T\\\\u00fcrkiye and our long-term commitment to the market.\\\\u201d Spanish fashion retailer Mango said it intends to open around ten new stores in T\\\\u00fcrkiye in 2026, which would lift its total number of outlets in the country to 80 by the end of the year.\"}]' name='brave_search' tool_call_id='call_IWiAqRARRnGcWgq7pUrXglm8'",
+      "tool_names": [
+        "transfer_to_brave_scout",
+        "brave_search"
+      ]
+    }
+  ]
+}

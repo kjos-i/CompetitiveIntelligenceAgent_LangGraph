@@ -18,7 +18,6 @@ Press Ctrl+C to stop.
 import asyncio
 import sys
 from datetime import datetime
-from pathlib import Path
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 

@@ -1,16 +1,18 @@
 # Competitive Intelligence Agent
 
-Competitive Intelligence (CI) agent for monitoring competitors in real time. Built with LangGraph Supervisor, OpenAI GPT-4o, Brave Search, Tavily, SQLite, and Streamlit.
+Competitive Intelligence (CI) agent for monitoring competitors in real time. Built with LangGraph Supervisor, OpenAI (model configured in `config.py`), Brave Search, Tavily, SQLite, and Streamlit.
 
-In auto mode, the agent runs two specialist sub-agents under a supervisor. First, **`brave_scout`** performs a broad web scan. Then the supervisor scores each result for significance relative to previous findings, flags it if it crosses the threshold, and saves to the SQLite ledger. Once all scans are complete, a human-in-the-loop checkpoint presents the flagged findings and asks whether to proceed with more extensive searches. If approved, **`tavily_analyst`** targets the flagged changes and conducts a thorough investigation. The supervisor again scores the results and saves them to the ledger. All results are visualised in a Streamlit dashboard.
+In auto mode, the agent runs two specialist sub-agents under a supervisor. First, **`brave_scout`** performs a broad web scan. Then the supervisor scores each result for significance relative to previous findings, flags it if it crosses the threshold, and saves to the SQLite ledger. Once all scans are complete, a human-in-the-loop checkpoint presents the flagged findings and asks whether to proceed with more extensive searches. If approved, **`tavily_analyst`** targets the flagged changes and conducts a thorough investigation. The supervisor again scores the results and saves them to the ledger. All results are visualised in a Streamlit dashboard. For evaluation of the agent performance, a self-contained harness runs the agent against curated test cases, scores its output with deterministic checks and DeepEval LLM-judge metrics, persists every run to a SQLite ledger, and surfaces the results in a separate Streamlit dashboard for trend analysis.
 
-The Streamlit dashboard can be used to visualize data in the SQLite ledger at any time:
+The agent's Streamlit dashboard can be used to visualize data in the SQLite ledger at any time:
 
 ```bash
 python -m streamlit run dashboard.py --server.port 8501
 ```
 
 See [Run Instructions](#run-instructions) below for how to start the agent.
+
+For a top-down map of every folder and file in the project, see [`info_project.md`](info_project.md). For a candid review of the project's strengths, trade-offs, and room for improvement, see [`info_considerations.md`](info_considerations.md). For more information about the evaluation harness used to evaluate the agent, see [`evaluation/README.md`](evaluation/README.md).
 
 All scripts in this folder are Learning/Demo status.
 
@@ -57,6 +59,15 @@ The topics searched and the metrics used to evaluate results are all configurabl
 | `watchlist.json` | List of competitors to monitor in Auto mode (names, aliases, optional special focus) |
 | `system_prompt_agent.txt` | Supervisor system prompt — controls routing logic, scoring rules, and output format |
 | `requirements.txt` | Python dependencies |
+| [`info_project.md`](info_project.md) | Top-down map of every folder and file in the project |
+| [`info_considerations.md`](info_considerations.md) | Project-wide review: strengths, trade-offs, and room for improvement |
+
+### Subfolders
+
+| Path | Purpose |
+|---|---|
+| `tests/` | pytest unit suite for the parent project — schemas, persistence layer, and shared helpers. Run with `python -m pytest tests/ -q`. |
+| `evaluation/` | Self-contained evaluation harness (Layer 1 deterministic + Layer 2 LLM-judged), Streamlit results dashboard, SQLite ledger, and its own pytest suite. See [`evaluation/README.md`](evaluation/README.md) |
 
 ### Runtime Artifacts
 
@@ -87,7 +98,7 @@ launch_agent.py
 
 1. `agent_modes.py` looks up the last `HISTORY_LIMIT` ledger entries for the company and builds a `PREVIOUS STATUS` context block.
 2. Today's date is injected into the query so the model can reject sources older than the configured cutoff.
-3. The query is sent to the LangGraph supervisor. By default it routes to `brave_scout` only — the system prompt strictly forbids using `tavily_analyst` unless explicitly instructed.
+3. The query is sent to the LangGraph supervisor. By default it routes to `brave_scout` only, the system prompt strictly forbids using `tavily_analyst` unless explicitly instructed.
 4. The supervisor writes a structured report ending with `SIGNIFICANCE_SCORE: X` (1–10).
 5. A second LLM call extracts a sentiment label and score.
 6. Everything is saved to `agent_memory.db`.
@@ -95,7 +106,7 @@ launch_agent.py
 
 ## Scoring System
 
-Significance is scored **relative to PREVIOUS STATUS** — not by the absolute importance of the news:
+Significance is scored **relative to PREVIOUS STATUS**, not by the absolute importance of the news:
 
 | Score | Meaning |
 |---|---|
@@ -105,33 +116,33 @@ Significance is scored **relative to PREVIOUS STATUS** — not by the absolute i
 | 7–8 | New strategic shift (pricing, product, positioning, partnership) |
 | 9–10 | Major new move with strong commercial or competitive impact |
 
-Scores ≥ `SIGNIFICANCE_THRESHOLD` (default: 7) trigger a Tavily deep search in Auto mode.
+Scores ≥ `SIGNIFICANCE_THRESHOLD` trigger a Tavily deep search in Auto mode.
 
 ## Configuration
 
-All tuning is done in `config.py`:
+All tuning is done in `config.py`, see that file for the current values.
 
-| Setting | Default | Description |
-|---|---|---|
-| `MODEL_NAME` | `"gpt-4o"` | OpenAI model used by all agents |
-| `TEMPERATURE` | `0.0` | Low temperature for factual, deterministic output |
-| `SIGNIFICANCE_THRESHOLD` | `7` | Minimum score to trigger a deep search / alert |
-| `HISTORY_LIMIT` | `5` | Number of previous ledger entries passed as context |
-| `TAVILY_MAX_RESULTS` | `3` | Results per Tavily call |
-| `TAVILY_SEARCH_DEPTH` | `"advanced"` | `"basic"` or `"advanced"` |
-| `TAVILY_TIME_RANGE` | `"week"` | Restrict Tavily results to the past week |
-| `BRAVE_MAX_RESULTS` | `5` | Results per Brave Search call |
-| `BRAVE_FRESHNESS` | `"pw"` | `"pd"` = past day, `"pw"` = past week, `"pm"` = past month |
-| `EXCLUDED_DOMAINS` | `["linkedin.com"]` | Domains blocked from all results |
-| `INCLUDED_DOMAINS` | `[]` | Domains to prioritise (empty = no preference) |
-| `SCHEDULE_HOUR` | `9` | Cron schedule: hour to run the lookout (24h format) — used when `SCHEDULE_INTERVAL_MINUTES` is `0` |
-| `SCHEDULE_MINUTE` | `0` | Cron schedule: minute to run the lookout — used when `SCHEDULE_INTERVAL_MINUTES` is `0` |
-| `SCHEDULE_DAYS` | `"mon-fri"` | Cron schedule: days to run (`"mon-fri"`, `"mon-sun"`, etc.) — used when `SCHEDULE_INTERVAL_MINUTES` is `0` |
-| `SCHEDULE_INTERVAL_MINUTES` | `1` | Set to a positive integer to run every N minutes (interval mode). Set to `0` to use the cron schedule above instead |
-| `UPDATES` | `True` | Print active node names during execution |
-| `EVENTS` | `False` | Print every raw LangGraph event (verbose) |
-| `MESSAGES` | `False` | Print full message history at end of stream |
-| `DRAW` | `False` | Save a PNG of the agent graph on startup |
+| Setting | Description |
+|---|---|
+| `MODEL_NAME` | OpenAI model used by all agents |
+| `TEMPERATURE` | Low temperature for factual, deterministic output |
+| `SIGNIFICANCE_THRESHOLD` | Minimum score to trigger a deep search / alert |
+| `HISTORY_LIMIT` | Number of previous ledger entries passed as context |
+| `TAVILY_MAX_RESULTS` | Results per Tavily call |
+| `TAVILY_SEARCH_DEPTH` | `"basic"` or `"advanced"` |
+| `TAVILY_TIME_RANGE` | Restrict Tavily results to the past day, week, month, or year |
+| `BRAVE_MAX_RESULTS` | Results per Brave Search call |
+| `BRAVE_FRESHNESS` | `"pd"` = past day, `"pw"` = past week, `"pm"` = past month |
+| `EXCLUDED_DOMAINS` | Domains blocked from all results |
+| `INCLUDED_DOMAINS` | Domains to prioritise (empty = no preference) |
+| `SCHEDULE_HOUR` | Cron schedule: hour to run the lookout (24h format) — used when `SCHEDULE_INTERVAL_MINUTES` is `0` |
+| `SCHEDULE_MINUTE` | Cron schedule: minute to run the lookout — used when `SCHEDULE_INTERVAL_MINUTES` is `0` |
+| `SCHEDULE_DAYS` | Cron schedule: days to run (`"mon-fri"`, `"mon-sun"`, etc.) — used when `SCHEDULE_INTERVAL_MINUTES` is `0` |
+| `SCHEDULE_INTERVAL_MINUTES` | Set to a positive integer to run every N minutes (interval mode). Set to `0` to use the cron schedule above instead |
+| `UPDATES` | Print active node names during execution |
+| `EVENTS` | Print every raw LangGraph event (verbose) |
+| `MESSAGES` | Print full message history at end of stream |
+| `DRAW` | Save a PNG of the agent graph on startup |
 
 ## Watchlist (`watchlist.json`)
 
@@ -163,6 +174,7 @@ Add competitors to monitor in Auto mode:
 ```
 altair
 apscheduler
+deepeval
 langchain
 langchain-community
 langchain-core
@@ -171,11 +183,15 @@ langchain-tavily
 langgraph-supervisor
 numpy
 pandas
+plotly
 pydantic
+pytest
 python-dotenv
 streamlit
 streamlit-autorefresh
 ```
+
+`deepeval` and `pytest` are only needed when running the [evaluation harness and tests](evaluation/README.md).
 
 Install from `requirements.txt`:
 
@@ -193,13 +209,7 @@ BRAVE_SEARCH_API_KEY=...
 TAVILY_API_KEY=...
 ```
 
-The `.env` file path is set directly in `agent.py`:
-
-```python
-load_dotenv()
-```
-
-Update this path to match your local setup before running.
+`agent.py` calls `load_dotenv()` with no path argument, so `python-dotenv` auto-discovers a `.env` file in the current working directory or any parent directory. Place your `.env` at the project root (or any parent of where you launch from) and no code change is needed.
 
 ## Run Instructions
 
@@ -208,7 +218,7 @@ Update this path to match your local setup before running.
 `launch_schedule_runner.py` is the main way to run the agent in production. It uses APScheduler to run `run_automated_lookout` on a recurring schedule. Two modes are supported, controlled by `SCHEDULE_INTERVAL_MINUTES` in `config.py`:
 
 - **Interval mode** (`SCHEDULE_INTERVAL_MINUTES > 0`): runs every N minutes. Set to `1` to run every minute.
-- **Cron mode** (`SCHEDULE_INTERVAL_MINUTES = 0`): runs at a fixed time of day, configured via `SCHEDULE_HOUR`, `SCHEDULE_MINUTE`, and `SCHEDULE_DAYS` (default: weekdays at 09:00).
+- **Cron mode** (`SCHEDULE_INTERVAL_MINUTES = 0`): runs at a fixed time of day, configured via `SCHEDULE_HOUR`, `SCHEDULE_MINUTE`, and `SCHEDULE_DAYS` — see `config.py`.
 
 ```bash
 python launch_schedule_runner.py
@@ -229,9 +239,9 @@ Select mode at the prompt:
 2: Auto Mode (Watchlist Automation)
 ```
 
-**Manual mode** — enter a company name, choose a search engine, and type a free-text research question.
+**Manual mode**: Enter a company name, choose a search engine, and type a free-text research question.
 
-**Auto mode** — scans all companies in `watchlist.json` with Brave Search, then optionally runs a Tavily deep search for any company that scored above the significance threshold.
+**Auto mode**: Scans all companies in `watchlist.json` with Brave Search, then optionally runs a Tavily deep search for any company that scored above the significance threshold.
 
 ### Streamlit Dashboard
 
@@ -241,7 +251,19 @@ Run from within the `CompetitiveIntelligenceAgent_LangGraph` folder:
 python -m streamlit run dashboard.py --server.port 8501
 ```
 
-The dashboard polls the database every 10 seconds and refreshes automatically when new rows are detected.
+The dashboard polls the database at the interval set by `POLL_SECONDS` in [`dashboard.py`](dashboard.py) and refreshes automatically when new rows are detected.
+
+### Run the test suite
+
+```bash
+python -m pytest tests/ -q
+```
+
+Covers the shared schemas (`pydantic_models.py`), the SQLite persistence layer (`memory_sqlite3.py`), and the utility helpers (`utils.py`). The evaluation harness has its own separate suite under [`evaluation/tests/`](evaluation/tests/).
+
+### Evaluation Harness
+
+The `evaluation/` folder contains a separate, self-contained evaluation system with its own dataset, runner, results dashboard, and pytest suite. See [`evaluation/README.md`](evaluation/README.md) for details and run instructions.
 
 ## Suggested Learning Path
 
@@ -250,5 +272,6 @@ The dashboard polls the database every 10 seconds and refreshes automatically wh
 3. Read `agent.py` to understand how the supervisor graph and sub-agents are constructed.
 4. Read `agent_modes.py` to see how queries are assembled (date injection, history context, directives).
 5. Read `memory_sqlite3.py` to understand the persistence layer.
-6. Run `launch_agent.py` in Manual mode for a live test.
-7. Open `dashboard.py` to explore results visually.
+6. Run `python -m pytest tests/ -q` to verify the schemas, persistence layer, and helpers are healthy in your environment.
+7. Run `launch_agent.py` in Manual mode for a live test.
+8. Open `dashboard.py` to explore results visually.

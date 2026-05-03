@@ -1,7 +1,7 @@
-"""Core runtime for the Moodgruppen competitive-intelligence agent.
+"""Core runtime for the competitive-intelligence agent.
 
 This module configures the model, search tools, supervisor graph, and the
-`run_agent` coroutine shared by the manual and automated workflows.
+run_agent coroutine shared by the manual and automated workflows.
 """
 
 import os
@@ -18,7 +18,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain_community.tools import BraveSearch
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 from langchain_tavily import TavilySearch
 from langgraph_supervisor import create_supervisor
@@ -48,7 +48,7 @@ from utils import print_agent_graph, setup_logger
 
 
 # Load environment variables for local development.
-load_dotenv()
+load_dotenv("C:/Users/kjosi/dotenv/.env")
 
 # Configure shared logging and persistence.
 logger = setup_logger(LOGGER_NAME, log_file=Path(__file__).with_name("agent.log"))
@@ -64,7 +64,7 @@ llm = ChatOpenAI(model=MODEL_NAME, temperature=TEMPERATURE)
 
 
 # ---------------------------------------------------------------------------
-# Sub-agent: broad web scout
+# Sub-agent: Broad web scout
 # Uses Brave Search for fast, wide coverage of recent news and press activity.
 # ---------------------------------------------------------------------------
 _brave_prompt = """\
@@ -73,6 +73,7 @@ Include content from sources such as official company websites, news outlets, pr
 Focus on recent developments and changes.
 Do not include AI-generated summaries, content aggregators, or pages that are themselves summaries of other articles.
 Do not include results that are historical and not relevant to the current state of the company.
+For every fact you report, include the exact source URL in parentheses immediately after the fact. Never paraphrase or omit URLs.
 """
 
 if EXCLUDED_DOMAINS:
@@ -100,7 +101,7 @@ brave_agent = create_agent(
 )
 
 # ---------------------------------------------------------------------------
-# Sub-agent: deep research analyst
+# Sub-agent: Deep research analyst
 # Uses Tavily for verified, source-level deep dives and fact-checking.
 # ---------------------------------------------------------------------------
 _tavily_prompt = """\
@@ -109,6 +110,7 @@ Include content from sources such as official company websites, news outlets, pr
 Focus on recent developments and changes.
 Do not include AI-generated summaries, content aggregators, or pages that are themselves summaries of other articles.
 Do not include results that are historical and not relevant to the current state of the company.
+For every fact you report, include the exact source URL in parentheses immediately after the fact. Never paraphrase or omit URLs.
 """
 
 tavily_agent = create_agent(
@@ -127,8 +129,6 @@ tavily_agent = create_agent(
     system_prompt=_tavily_prompt,
 )
 
-
-
 # ---------------------------------------------------------------------------
 # Supervisor graph
 # Reads the routing logic from an external text file so the prompt can be
@@ -136,16 +136,43 @@ tavily_agent = create_agent(
 # add_handoff_messages=False prevents the "Successfully transferred to ..."
 # ToolMessage from being injected into the sub-agent's context, which would
 # otherwise cause the LLM to comment on the handoff mechanism.
+# output_mode="last_message" ensures only the sub-agent's final synthesis
+# is written back to shared state — raw search results are not passed to
+# the supervisor, saving tokens and reducing noise.
 # ---------------------------------------------------------------------------
 system_prompt_path = Path(__file__).resolve().with_name("system_prompt_agent.txt")
-system_prompt = system_prompt_path.read_text(encoding="utf-8").strip()
+_base_system_prompt = system_prompt_path.read_text(encoding="utf-8").strip()
 logger.info(f"Loaded system prompt from: {system_prompt_path}")
+
+
+def _build_supervisor_prompt(state, config) -> list:
+    """Callable prompt for the supervisor.
+
+    Injects the per-run history_context (previous SQLite ledger entries)
+    from config['configurable'] into the supervisor's system prompt at
+    runtime.  This keeps history out of the HumanMessage so sub-agents never
+    receive it, they only need the lean search query.
+
+    Empty/whitespace-only history_context is treated as "no prior data"
+    so the agent gets an explicit PREVIOUS STATUS marker instead of a blank
+    line. Without this, the system prompt's "compare PREVIOUS STATUS to NEW
+    INFORMATION" instructions leave the agent asking the user to provide
+    both — the L2 live cold-start path is the typical caller.
+    """
+    history = (config.get("configurable", {}).get("history_context") or "").strip()
+    if not history:
+        history = "PREVIOUS STATUS: No prior data."
+    system = SystemMessage(content=f"{_base_system_prompt}\n\n{history}")
+    return [system] + list(state["messages"])
+
 
 supervisor = create_supervisor(
     [tavily_agent, brave_agent],
     model=llm,
-    prompt=system_prompt,
+    prompt=_build_supervisor_prompt,
     add_handoff_messages=False,
+    output_mode="last_message",
+    add_handoff_back_messages = True,
 )
 agent = supervisor.compile()
 if DRAW:
@@ -174,7 +201,7 @@ def _content_to_text(value: Any) -> str:
         return str(value.get("text") or value.get("content") or value)
     return str(value)
 
-
+# LLM output passed to _extract_messages. Result: Clean list of messages (e.g. [HumanMessage, AIMessage])
 def _extract_messages(output: Any) -> list[Any]:
     """Safely retrieve a messages list from different output shapes."""
     if isinstance(output, dict):
@@ -190,17 +217,19 @@ async def run_agent(query: str, config: dict, company: str, engine: str, mode: s
     a structured sentiment call is made and everything is saved to SQLite.
 
     Args:
-        query:   Full prompt string sent to the supervisor (includes TODAY,
-                 DIRECTIVE, PREVIOUS STATUS, etc.).
-        config:  LangGraph runnable config; must contain a ``thread_id``.
+        query:   Lean prompt string sent to the supervisor and sub-agents
+                 (DIRECTIVE, TODAY, company name, research focus).
+                 History is NOT included here, it travels via config.
+        config:  LangGraph runnable config, must contain a thread_id
+                 and history_context in the configurable dict.
         company: Canonical company name used as the ledger key.
-        engine:  Either ``"brave_search"`` or ``"tavily"`` — stored for
+        engine:  Either "brave_search" or "tavily", stored for
                  filtering in the dashboard.
-        mode:    Either ``"manual"`` or ``"auto"`` — stored for filtering.
+        mode:    Either "manual" or "auto", stored for filtering.
 
     Returns:
-        ``True`` if the significance score is at or above
-        ``SIGNIFICANCE_THRESHOLD`` (i.e. a strategically notable change).
+        True if the significance score is at or above
+        SIGNIFICANCE_THRESHOLD (i.e. a strategically notable change).
     """
     tool_timers: dict = {}   # run_id → wall-clock start time, used to compute tool latency
     significance_score = 0
@@ -215,17 +244,17 @@ async def run_agent(query: str, config: dict, company: str, engine: str, mode: s
             logger.warning(f"Skipping unexpected event payload: {event!r}")
             continue
 
-        event_name = event.get("event", "")
+        event_type = event.get("event", "")
         run_id = event.get("run_id")
         event_data = event.get("data", {}) if isinstance(event.get("data", {}), dict) else {}
-        event_label = event.get("name", "")
+        event_name = event.get("name", "")
 
         if EVENTS:
-            print(f"\n[Event] {event_name}", flush=True)
-            logger.debug(f"Event: {event_name} | Run ID: {run_id} | Data keys: {list(event_data.keys())}")
+            print(f"\n[Event] {event_type}", flush=True)
+            logger.debug(f"Event: {event_type} | Run ID: {run_id} | Data keys: {list(event_data.keys())}")
 
         try:
-            if UPDATES and event_name == "on_chain_stream":
+            if UPDATES and event_type == "on_chain_stream":
                 updates = event_data.get("updates", {})
                 if isinstance(updates, dict):
                     for node, delta in updates.items():
@@ -234,38 +263,38 @@ async def run_agent(query: str, config: dict, company: str, engine: str, mode: s
                             print(f"◈ Node '{node}' active.")
                             sys.stdout.flush()
 
-            if event_name == "on_chat_model_start":
+            if event_type == "on_chat_model_start":
                 print("\n✧ Thinking...\n", end=" ", flush=True)
 
-            if event_name == "on_chat_model_stream":
+            if event_type == "on_chat_model_stream":
                 chunk = event_data.get("chunk")
                 content = _content_to_text(getattr(chunk, "content", None))
                 if content:
                     print(content, end="", flush=True)
 
-            if event_name == "on_tool_start":
+            if event_type == "on_tool_start":
                 if run_id is not None:
                     tool_timers[run_id] = time.time()
-                print(f"▶ Tool: {event_label}")
-                logger.debug(f"Tool {event_label} input: {event_data.get('input')}")
+                print(f"▶ Tool: {event_name}")
+                logger.debug(f"Tool {event_name} input: {event_data.get('input')}")
                 sys.stdout.flush()
 
-            if event_name == "on_tool_end":
+            if event_type == "on_tool_end":
                 start_time = tool_timers.pop(run_id, None) if run_id is not None else None
                 latency = time.time() - start_time if start_time else 0
-                print(f"⏱ {latency:.2f}s {event_label} finished.")
-                logger.info(f"Tool {event_label} completed in {latency:.2f}s")
+                print(f"⏱ {latency:.2f}s {event_name} finished.")
+                logger.info(f"Tool {event_name} completed in {latency:.2f}s")
                 sys.stdout.flush()
 
-            if event_name == "on_tool_error":
+            if event_type == "on_tool_error":
                 if run_id is not None:
                     tool_timers.pop(run_id, None)
                 error_msg = _content_to_text(event_data.get("error", "Unknown error"))
-                print(f"!! ERROR in {event_label}: {error_msg}")
-                logger.error(f"Tool {event_label} failed: {error_msg}")
+                print(f"!! ERROR in {event_name}: {error_msg}")
+                logger.error(f"Tool {event_name} failed: {error_msg}")
                 sys.stdout.flush()
 
-            if event_name == "on_chain_end" and event_label == "agent":
+            if event_type == "on_chain_end" and event_name == "agent":
                 final_output = event_data.get("output", {})
                 messages = _extract_messages(final_output)
 
@@ -287,7 +316,7 @@ async def run_agent(query: str, config: dict, company: str, engine: str, mode: s
                         final_text = text
 
         except Exception as e:
-            logger.warning(f"Skipping malformed event '{event_name or 'unknown'}': {e}")
+            logger.warning(f"Skipping malformed event '{event_type or 'unknown'}': {e}")
             continue
 
     # --- Post-stream: save exactly once using the last valid research report ---
@@ -308,8 +337,8 @@ async def run_agent(query: str, config: dict, company: str, engine: str, mode: s
             {final_text}""")
         ])
 
-    except Exception as e:
-        logger.warning(f"Structured sentiment extraction failed: {e}")
+    except Exception as exc:
+        logger.warning(f"Structured sentiment extraction failed: {exc}")
 
     sentiment = sentiment_result.sentiment if sentiment_result else "unknown"
     sentiment_score = sentiment_result.sentiment_score if sentiment_result else None
@@ -327,8 +356,8 @@ async def run_agent(query: str, config: dict, company: str, engine: str, mode: s
             engine=engine,
             mode=mode,
         )
-    except Exception as e:
-        logger.warning(f"Could not save to ledger: {e}")
+    except Exception as exc:
+        logger.warning(f"Could not save to ledger: {exc}")
 
     print("\n" + "─" * 40)
     logger.info(f"Task complete. Score: {significance_score} | Significant: {is_major_change}")

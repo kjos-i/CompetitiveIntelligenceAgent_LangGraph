@@ -1,0 +1,172 @@
+[
+  {
+    "id": "No change Brave",
+    "engine": "brave",
+    "query": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Nike: Monitor for new product launches in Europe or brand repositioning in Europe.",
+    "history_context": "PREVIOUS STATUS (last 1 entries, oldest first):\n2026-04-16 | Nike launched the Air Max Pulse 2026 in Germany and the Netherlands, targeting the urban running segment. Campaign anchored on sustainability messaging. SIGNIFICANCE_SCORE: 6",
+    "company": "Nike",
+    "scenario_type": "no_change",
+    "expected_significance_range": [1, 3],
+    "expected_answer_points": [
+      "The Air Max Pulse 2026 launch was already recorded in the previous status.",
+      "No new product launch or brand repositioning has been detected beyond what was previously known.",
+      "Significance score should be 1-3 because this is not a new development."
+    ],
+    "required_keywords": ["SIGNIFICANCE_SCORE"],
+    "disallowed_keywords": ["I cannot", "I don't have access"],
+    "fixture": {
+      "final_report": "## Executive Summary\n\nNo materially new developments detected for Nike in Europe compared to the previous intelligence report dated April 16, 2026. Search results continue to surface the same Air Max Pulse 2026 campaign in Germany and the Netherlands. No new product launches or brand repositioning events were identified within this monitoring window.\n\n## Key Findings\n\n- Nike's Air Max Pulse 2026 continues to receive coverage in German and Dutch sports media, with no new angles beyond the original launch announcement. (https://www.runnersworld.com/de/nike-air-max-pulse-2026)\n- Sustainability messaging tied to the Air Max Pulse remains the dominant theme in European press. No pivot or new campaign detected. (https://www.sportschau.de/nike-sustainability-2026)\n\n## Competitive Implication\n\nNo strategic shift has occurred. Nike's European positioning remains unchanged since April 16. The same campaign is receiving ongoing press coverage but this does not represent a new competitive signal.\n\n## Sources\n\n1. https://www.runnersworld.com/de/nike-air-max-pulse-2026\n2. https://www.sportschau.de/nike-sustainability-2026\n\n## Significance Score Reasoning\n\nThis is an EXISTING development because the Air Max Pulse 2026 launch in Germany and the Netherlands was fully captured in the previous status (April 16, 2026). Search results surface the same event with no new information. Delta = zero.\n\nSIGNIFICANCE_SCORE: 2",
+      "tool_called": "brave_scout",
+      "tool_call_count": 1,
+      "tool_output": "[{\"title\": \"Nike Air Max Pulse 2026 launches in Germany\", \"url\": \"https://www.runnersworld.com/de/nike-air-max-pulse-2026\", \"description\": \"Nike has launched the Air Max Pulse 2026 in the German and Dutch markets targeting urban runners with sustainability messaging.\"}, {\"title\": \"Nike sustainability drive in Europe\", \"url\": \"https://www.sportschau.de/nike-sustainability-2026\", \"description\": \"Nike's European campaign for the Air Max Pulse continues to emphasise eco-friendly materials.\"}]",
+      "latency_seconds": 14.3
+    },
+    "category": "delta_scoring",
+    "notes": "Previous status exactly matches web results. Agent must not inflate the score. Score must be 1-3."
+  },
+  {
+    "id": "Major new entity Tavily",
+    "engine": "tavily",
+    "query": "DIRECTIVE: Use 'tavily_analyst' only. TODAY: April 23, 2026. Research Adidas: Monitor for new product launches in Europe or brand repositioning in Europe.",
+    "history_context": "PREVIOUS STATUS: No prior data.",
+    "company": "Adidas",
+    "scenario_type": "major_new_entity",
+    "expected_significance_range": [7, 10],
+    "expected_answer_points": [
+      "Adidas announced a completely new product line or strategic repositioning in Europe that was not previously known.",
+      "The finding represents a genuinely new strategic entity or market event.",
+      "Significance score should be 7 or higher."
+    ],
+    "required_keywords": ["SIGNIFICANCE_SCORE"],
+    "disallowed_keywords": ["I cannot", "I don't have access"],
+    "fixture": {
+      "final_report": "## Executive Summary\n\nAdidas has announced a major new product platform — the \"Adidas Terrex Eco Series\" — specifically designed for the European outdoor market. This is a brand new product line with no prior history in our intelligence ledger. The launch represents a strategic move into the premium sustainable outdoor segment, directly competing with Patagonia and Arc'teryx in the European market.\n\n## Key Findings\n\n- Adidas unveiled the Terrex Eco Series at a press event in Munich on April 22, 2026, targeting Nordic and Alpine markets first. Full European rollout planned for Q3 2026. (https://www.adidas.com/press/terrex-eco-series-2026)\n- The Terrex Eco Series is manufactured with 100% recycled materials and priced at a 30% premium over Adidas's existing outdoor line, signalling a deliberate repositioning upmarket. (https://www.sustainablebrands.com/adidas-terrex-eco-europe)\n- Industry analysts describe this as Adidas's most significant European outdoor move since the original Terrex launch in 2012. (https://www.sportsintelligence.com/adidas-terrex-eco-analysis-2026)\n\n## Competitive Implication\n\nThis is a significant new competitive signal. Adidas is entering the premium sustainable outdoor segment in Europe, which was previously dominated by non-athletic brands. This could pressure Nike's ACG line and Puma's Explore range if they do not respond with comparable sustainable credentials.\n\n## Sources\n\n1. https://www.adidas.com/press/terrex-eco-series-2026\n2. https://www.sustainablebrands.com/adidas-terrex-eco-europe\n3. https://www.sportsintelligence.com/adidas-terrex-eco-analysis-2026\n\n## Significance Score Reasoning\n\nThis is a NEW STRATEGIC ENTITY because the Terrex Eco Series has no presence in the previous status (no prior data). This is not a minor update to an existing product — it is an entirely new platform with new pricing, new materials, and new target segments in Europe. Delta = maximum.\n\nSIGNIFICANCE_SCORE: 8",
+      "tool_called": "tavily_analyst",
+      "tool_call_count": 1,
+      "tool_output": "[{\"url\": \"https://www.adidas.com/press/terrex-eco-series-2026\", \"content\": \"Adidas today unveiled the Terrex Eco Series at a Munich press event, a new outdoor product line built on 100% recycled materials targeting the European Alpine and Nordic markets.\"}, {\"url\": \"https://www.sustainablebrands.com/adidas-terrex-eco-europe\", \"content\": \"The Terrex Eco Series is priced 30% above Adidas existing outdoor range, representing an upmarket repositioning in Europe.\"}, {\"url\": \"https://www.sportsintelligence.com/adidas-terrex-eco-analysis-2026\", \"content\": \"Analysts call the Terrex Eco Series launch Adidas most significant European outdoor move since 2012.\"}]",
+      "latency_seconds": 22.1
+    },
+    "category": "delta_scoring",
+    "notes": "No prior data — any finding is new. Score must be 7-10 for a genuinely new strategic entity."
+  },
+  {
+    "id": "Old information Brave search",
+    "engine": "brave",
+    "query": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Puma: Monitor for new product launches in Europe or brand repositioning in Europe.",
+    "history_context": "PREVIOUS STATUS (last 1 entries, oldest first):\n2026-03-01 | Puma launched the Nitro Elite 3 running shoe in European markets targeting the performance running segment. SIGNIFICANCE_SCORE: 5",
+    "company": "Puma",
+    "scenario_type": "old_information",
+    "expected_significance_range": [1, 2],
+    "expected_answer_points": [
+      "Search results surface articles about the Nitro Elite 3 that are more than one month old relative to TODAY.",
+      "Information older than one month must not score above 2 per the system prompt recency rules.",
+      "Significance score should be 1-2."
+    ],
+    "required_keywords": ["SIGNIFICANCE_SCORE"],
+    "disallowed_keywords": ["I cannot", "I don't have access"],
+    "fixture": {
+      "final_report": "## Executive Summary\n\nSearch results for Puma in Europe surface exclusively archival content related to the Nitro Elite 3 launch from early March 2026. This event was already captured in the previous intelligence report. No new developments have been detected within the monitoring window. Per the recency rules, information older than one month cannot receive a significance score above 2.\n\n## Key Findings\n\n- Coverage of the Puma Nitro Elite 3 launch from March 1, 2026 continues to circulate in European running media, with no new angles or follow-up announcements. (https://www.laufreport.de/puma-nitro-elite-3-launch)\n- No new Puma product launches or repositioning events for the European market have been identified in the past week. (https://www.puma.com/press/europe)\n\n## Competitive Implication\n\nNo new competitive signal. Puma's European market activity remains unchanged from the previous status. The Nitro Elite 3 is in its post-launch phase with no incremental developments.\n\n## Sources\n\n1. https://www.laufreport.de/puma-nitro-elite-3-launch\n2. https://www.puma.com/press/europe\n\n## Significance Score Reasoning\n\nThis is an EXISTING development. The Nitro Elite 3 launch was recorded on March 1, 2026 — more than seven weeks before TODAY (April 23, 2026). Per the scoring rules, information older than one month is archival and cannot score above 2. Delta = zero; recency cap enforced.\n\nSIGNIFICANCE_SCORE: 1",
+      "tool_called": "brave_scout",
+      "tool_call_count": 1,
+      "tool_output": "[{\"title\": \"Puma Nitro Elite 3 now available across Europe\", \"url\": \"https://www.laufreport.de/puma-nitro-elite-3-launch\", \"description\": \"Published March 1, 2026. Puma released the Nitro Elite 3 across European markets.\"}, {\"title\": \"Puma Europe press releases\", \"url\": \"https://www.puma.com/press/europe\", \"description\": \"No new press releases in April 2026.\"}]",
+      "latency_seconds": 11.8
+    },
+    "category": "delta_scoring",
+    "notes": "Web results are older than 1 month relative to TODAY. Recency cap must be enforced. Score must be 1-2."
+  },
+  {
+    "id": "Stop rule Brave search",
+    "engine": "brave",
+    "query": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Zara: Monitor for new product launches in Europe or brand repositioning in Europe.",
+    "history_context": "PREVIOUS STATUS: No prior data.",
+    "company": "Zara",
+    "scenario_type": "stop_rule",
+    "expected_significance_range": [1, 10],
+    "expected_answer_points": [
+      "The agent called brave_scout exactly once and did not make additional tool calls."
+    ],
+    "required_keywords": ["SIGNIFICANCE_SCORE"],
+    "disallowed_keywords": [],
+    "fixture": {
+      "final_report": "## Executive Summary\n\nZara has announced a new sustainable denim line — \"Zara Origin\" — launching across European flagship stores in May 2026. This is a new product initiative not previously captured in the intelligence ledger.\n\n## Key Findings\n\n- Zara Origin, a premium denim line made from organic cotton and recycled fibres, will launch in Zara's top 50 European stores in May 2026. (https://www.zara.com/press/origin-denim-2026)\n- The launch is accompanied by a digital-first marketing campaign targeting Gen Z consumers in Western Europe. (https://www.fashionnetwork.com/zara-origin-gen-z)\n\n## Competitive Implication\n\nZara is strengthening its sustainability credentials in European markets, a space increasingly crowded by H&M Conscious and Mango Committed lines.\n\n## Sources\n\n1. https://www.zara.com/press/origin-denim-2026\n2. https://www.fashionnetwork.com/zara-origin-gen-z\n\n## Significance Score Reasoning\n\nThis is a NEW development because Zara Origin did not exist in the previous status. It is a concrete new product line with a confirmed launch date, not a rumour or a repackaging of existing products.\n\nSIGNIFICANCE_SCORE: 7",
+      "tool_called": "brave_scout",
+      "tool_call_count": 1,
+      "tool_output": "[{\"title\": \"Zara Origin sustainable denim launching in Europe May 2026\", \"url\": \"https://www.zara.com/press/origin-denim-2026\", \"description\": \"Zara announces Origin, an organic cotton and recycled fibre denim line for European flagship stores.\"}, {\"title\": \"Zara targets Gen Z with digital-first Origin campaign\", \"url\": \"https://www.fashionnetwork.com/zara-origin-gen-z\", \"description\": \"Zara launches digital marketing push for Origin denim, targeting Gen Z in Western Europe.\"}]",
+      "latency_seconds": 13.6
+    },
+    "category": "routing",
+    "notes": "Primarily tests the stop rule: tool_call_count must be exactly 1. Also tests directive compliance for brave_scout."
+  },
+  {
+    "id": "Directive Tavily",
+    "engine": "tavily",
+    "query": "DIRECTIVE: Use 'tavily_analyst' only. TODAY: April 23, 2026. Research H&M: Monitor for new product launches in Europe or brand repositioning in Europe.",
+    "history_context": "PREVIOUS STATUS: No prior data.",
+    "company": "H&M",
+    "scenario_type": "directive_tavily",
+    "expected_significance_range": [1, 10],
+    "expected_answer_points": [
+      "The tavily_analyst sub-agent was used (not brave_scout)."
+    ],
+    "required_keywords": ["SIGNIFICANCE_SCORE"],
+    "disallowed_keywords": [],
+    "fixture": {
+      "final_report": "## Executive Summary\n\nH&M has relaunched its Conscious Collection under a new name — \"H&M Green\" — with an expanded product range covering activewear, basics, and occasionwear across all European markets as of April 2026.\n\n## Key Findings\n\n- H&M Green replaces the Conscious Collection across all European markets from April 2026, with a new visual identity and expanded SKU range. (https://www.hm.com/press/green-collection-europe-2026)\n- H&M CEO confirmed in an interview that H&M Green is a permanent brand within the H&M portfolio rather than a seasonal capsule. (https://www.businessoffashion.com/hm-green-permanent-brand-2026)\n\n## Competitive Implication\n\nH&M is elevating its sustainability story from a seasonal capsule to a permanent sub-brand. This is a meaningful repositioning that increases pressure on Zara Origin and Mango Committed.\n\n## Sources\n\n1. https://www.hm.com/press/green-collection-europe-2026\n2. https://www.businessoffashion.com/hm-green-permanent-brand-2026\n\n## Significance Score Reasoning\n\nThis is a NEW STRATEGIC ENTITY. Renaming and permanently repositioning the Conscious Collection as H&M Green is a brand architecture decision, not a minor update. No prior data existed for H&M.\n\nSIGNIFICANCE_SCORE: 7",
+      "tool_called": "tavily_analyst",
+      "tool_call_count": 1,
+      "tool_output": "[{\"url\": \"https://www.hm.com/press/green-collection-europe-2026\", \"content\": \"H&M Green launches across all European markets in April 2026, replacing the Conscious Collection with a permanent sub-brand.\"}, {\"url\": \"https://www.businessoffashion.com/hm-green-permanent-brand-2026\", \"content\": \"H&M CEO: H&M Green is a permanent brand, not a capsule collection.\"}]",
+      "latency_seconds": 19.4
+    },
+    "category": "routing",
+    "notes": "Tests that the tavily_analyst sub-agent is called when directed, not brave_scout."
+  },
+  {
+    "id": "Citation required Brave search",
+    "engine": "brave",
+    "query": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Uniqlo: Monitor for new product launches in Europe or brand repositioning in Europe.",
+    "history_context": "PREVIOUS STATUS: No prior data.",
+    "company": "Uniqlo",
+    "scenario_type": "citation_required",
+    "expected_significance_range": [1, 10],
+    "expected_answer_points": [
+      "Every bullet point in the Key Findings section ends with a real URL in parentheses.",
+      "No placeholder URLs such as 'example.com' appear in the report."
+    ],
+    "required_keywords": ["SIGNIFICANCE_SCORE", "http"],
+    "disallowed_keywords": ["example.com", "placeholder", "I cannot find the URL"],
+    "fixture": {
+      "final_report": "## Executive Summary\n\nUniqlo has opened its largest European store in Paris's Le Marais district and simultaneously launched its LifeWear 2026 Spring Collection across all European markets. Both developments represent new competitive intelligence for this company.\n\n## Key Findings\n\n- Uniqlo opened a 4,000 sqm flagship store in Paris Le Marais on April 20, 2026, its largest European location to date. (https://www.uniqlo.com/press/paris-le-marais-flagship-2026)\n- The LifeWear 2026 Spring Collection debuted across European e-commerce and in-store simultaneously, featuring a capsule collaboration with a European designer. (https://www.vogue.fr/uniqlo-lifewear-spring-2026)\n- Uniqlo Europe CEO stated the Paris flagship is the anchor for a 10-store European expansion plan through 2027. (https://www.retailgazette.co.uk/uniqlo-europe-expansion-2026)\n\n## Competitive Implication\n\nUniqlo is accelerating its European physical retail presence while competitors are reducing store footprints. The Paris flagship and associated expansion plan represent a clear long-term commitment to the European market.\n\n## Sources\n\n1. https://www.uniqlo.com/press/paris-le-marais-flagship-2026\n2. https://www.vogue.fr/uniqlo-lifewear-spring-2026\n3. https://www.retailgazette.co.uk/uniqlo-europe-expansion-2026\n\n## Significance Score Reasoning\n\nThis is a NEW STRATEGIC ENTITY. A flagship store opening and a confirmed 10-store European expansion plan are concrete new developments with no prior history in our ledger. The expansion plan in particular represents a multi-year strategic commitment.\n\nSIGNIFICANCE_SCORE: 7",
+      "tool_called": "brave_scout",
+      "tool_call_count": 1,
+      "tool_output": "[{\"title\": \"Uniqlo opens largest European store in Paris Le Marais\", \"url\": \"https://www.uniqlo.com/press/paris-le-marais-flagship-2026\", \"description\": \"Uniqlo opened a 4,000 sqm flagship in Paris Le Marais on April 20, 2026.\"}, {\"title\": \"Uniqlo LifeWear Spring 2026 launches in Europe\", \"url\": \"https://www.vogue.fr/uniqlo-lifewear-spring-2026\", \"description\": \"LifeWear Spring 2026 debuts across European markets with a designer collaboration capsule.\"}, {\"title\": \"Uniqlo plots 10-store European expansion\", \"url\": \"https://www.retailgazette.co.uk/uniqlo-europe-expansion-2026\", \"description\": \"Uniqlo Europe CEO confirms 10-store expansion plan through 2027 anchored by Paris flagship.\"}]",
+      "latency_seconds": 15.2
+    },
+    "category": "format",
+    "notes": "All Key Findings bullets must end with a real URL. Tests citation_presence metric. No placeholder URLs allowed."
+  },
+  {
+    "id": "Minor update Brave search",
+    "engine": "brave",
+    "query": "DIRECTIVE: Use 'brave_scout' only. TODAY: April 23, 2026. Research Mango: Monitor for new product launches in Europe or brand repositioning in Europe.",
+    "history_context": "PREVIOUS STATUS (last 1 entries, oldest first):\n2026-04-10 | Mango announced plans to open 20 new European stores in 2026 as part of its physical retail expansion strategy. SIGNIFICANCE_SCORE: 5",
+    "company": "Mango",
+    "scenario_type": "minor_update",
+    "expected_significance_range": [3, 5],
+    "expected_answer_points": [
+      "A minor update to the previously known Mango European expansion (e.g. a new opening date, a specific city confirmed, or a small new detail).",
+      "The core expansion plan is not new — only a small incremental detail is new.",
+      "Significance score should be 3-5."
+    ],
+    "required_keywords": ["SIGNIFICANCE_SCORE"],
+    "disallowed_keywords": ["I cannot", "I don't have access"],
+    "fixture": {
+      "final_report": "## Executive Summary\n\nA minor update to Mango's European expansion plan has been detected. The 20-store expansion announced on April 10, 2026 has now been partially specified: Mango confirmed the first three cities — Amsterdam, Copenhagen, and Warsaw — with opening dates in Q3 2026. This is an incremental update to an existing known plan, not a new strategic announcement.\n\n## Key Findings\n\n- Mango confirmed Amsterdam, Copenhagen, and Warsaw as the first three new European markets in its 2026 expansion, with Q3 opening dates. (https://www.mango.com/press/europe-expansion-update-april-2026)\n- The overall 20-store target and investment level remain unchanged from the April 10 announcement. No new surprises were found. (https://www.fashionunited.com/mango-europe-expansion-cities-2026)\n\n## Competitive Implication\n\nKnowing specific cities is incrementally useful for competitive positioning but does not change the strategic picture. Mango's commitment to Northern and Eastern Europe is confirmed.\n\n## Sources\n\n1. https://www.mango.com/press/europe-expansion-update-april-2026\n2. https://www.fashionunited.com/mango-europe-expansion-cities-2026\n\n## Significance Score Reasoning\n\nThis is a MINOR UPDATE. The expansion plan was already known (April 10, 2026). The new information is city-level specification — an incremental step on a known project, not a new strategic entity. Delta is small but real.\n\nSIGNIFICANCE_SCORE: 4",
+      "tool_called": "brave_scout",
+      "tool_call_count": 1,
+      "tool_output": "[{\"title\": \"Mango confirms first cities for European expansion\", \"url\": \"https://www.mango.com/press/europe-expansion-update-april-2026\", \"description\": \"Mango announces Amsterdam, Copenhagen and Warsaw as the first three new European markets in its 2026 expansion plan.\"}, {\"title\": \"Mango European expansion: cities confirmed for Q3 2026\", \"url\": \"https://www.fashionunited.com/mango-europe-expansion-cities-2026\", \"description\": \"The 20-store plan remains unchanged; only city-level detail is new.\"}]",
+      "latency_seconds": 12.7
+    },
+    "category": "delta_scoring",
+    "notes": "Known expansion plan, minor new detail (specific cities). Score must be 3-5 — not 1-2 (something new) and not 6+ (not a major new entity)."
+  }
+]

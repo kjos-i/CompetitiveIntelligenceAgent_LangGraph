@@ -1,10 +1,10 @@
-"""Shared utility helpers for the Moodgruppen agent.
+"""Shared utility helpers for the CI agent.
 
 Provides:
-- ``setup_logger``           — configure a dual file+console logger.
-- ``print_agent_graph``      — render the compiled agent graph as a PNG.
-- ``load_watchlist``         — parse and validate watchlist.json.
-- ``compute_semantic_distance`` — cosine distance between two text strings.
+- setup_logger           — configure a dual file+console logger.
+- print_agent_graph      — render the compiled agent graph as a PNG.
+- load_watchlist         — parse and validate watchlist.json.
+- compute_semantic_distance — cosine distance between two text strings.
 """
 
 # Standard library
@@ -28,10 +28,10 @@ def print_agent_graph(agent, filename="agent_graph.png", logger=None):
     """Render the compiled LangGraph agent as a PNG and save it to *filename*.
 
     Uses the Mermaid.js API embedded in LangGraph to draw nodes and edges.
-    Only called when ``DRAW = True`` in config.py; safe to skip in production.
+    Only called when DRAW = True in config.py; safe to skip in production.
 
     Args:
-        agent:    The compiled LangGraph ``CompiledStateGraph`` instance.
+        agent:    The compiled LangGraph CompiledStateGraph instance.
         filename: Destination path for the PNG file.
         logger:   Optional logger; falls back to the module-level logger.
     """
@@ -62,10 +62,10 @@ def setup_logger(name=DEFAULT_LOGGER_NAME, log_file=None, console=False):
     once, so repeated calls return the same configured logger.
 
     Args:
-        name:      Logger name; defaults to ``LOGGER_NAME`` from config.py.
-        log_file:  Path to the log file.  Defaults to ``agent.log`` next to
+        name:      Logger name; defaults to LOGGER_NAME from config.py.
+        log_file:  Path to the log file.  Defaults to agent.log next to
                    this module if not provided.
-        console:   When ``True``, also echo INFO+ messages to stdout.
+        console:   When True, also echo INFO+ messages to stdout.
     """
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG)
@@ -93,8 +93,8 @@ def setup_logger(name=DEFAULT_LOGGER_NAME, log_file=None, console=False):
 def load_watchlist(filename="watchlist.json") -> list[Company]:
     """Load and validate the competitor watchlist from *filename*.
 
-    Each entry in the JSON ``competitors`` array is validated against the
-    ``Company`` Pydantic model.  Invalid entries are skipped with a warning.
+    Each entry in the JSON competitors array is validated against the
+    Company Pydantic model.  Invalid entries are skipped with a warning.
     Returns an empty list if the file is missing or unreadable.
     """
     logger = logging.getLogger(DEFAULT_LOGGER_NAME)
@@ -121,14 +121,14 @@ async def compute_semantic_distance(prev_text: str, new_text: str, embeddings) -
     """Return the cosine distance between *prev_text* and *new_text*.
 
     A value of 0.0 means the texts are identical; 1.0 means they are
-    completely dissimilar.  Returns ``None`` when either text is empty or
+    completely dissimilar.  Returns None when either text is empty or
     when the embeddings call fails.
 
     Args:
         prev_text:  The earlier text (e.g. PREVIOUS STATUS report).
         new_text:   The newer text (e.g. the current research report).
         embeddings: A LangChain embeddings instance that supports
-                    ``aembed_documents``.
+                    aembed_documents.
     """
     logger = logging.getLogger(DEFAULT_LOGGER_NAME)
     if not prev_text or not new_text:

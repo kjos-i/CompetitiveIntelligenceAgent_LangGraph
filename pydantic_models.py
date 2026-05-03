@@ -1,4 +1,4 @@
-"""Pydantic models shared across the Moodgruppen agent modules."""
+"""Pydantic models shared across the CI agent modules."""
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -22,8 +22,8 @@ class Company(BaseModel):
 class SentimentResult(BaseModel):
     """Structured LLM output for post-stream sentiment evaluation.
 
-    Produced by a ``with_structured_output`` call after the main agent stream
-    completes.  Stored in the ``Description`` (label) and ``Sentiment`` (score)
+    Produced by a with_structured_output call after the main agent stream
+    completes.  Stored in the Description (label) and Sentiment (score)
     columns of the intel ledger.
     """
 

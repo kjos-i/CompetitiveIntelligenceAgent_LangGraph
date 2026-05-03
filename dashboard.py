@@ -27,7 +27,7 @@ st.set_page_config(page_title="Strategic CI Dashboard", layout="wide")
 def _get_latest_timestamp() -> str | None:
     """Return the most recent Timestamp value from the ledger.
 
-    Cached with a short TTL so the heavy ``load_data`` cache is only busted
+    Cached with a short TTL so the heavy load_data cache is only busted
     when a genuinely new row has arrived, not on every rerun.
     """
     if not DB_PATH.exists():
@@ -45,7 +45,7 @@ def load_data() -> pd.DataFrame:
     """Load the full intel ledger from SQLite into a DataFrame.
 
     Returns an empty DataFrame if the database file does not yet exist or if
-    the query fails.  Cached indefinitely; call ``load_data.clear()`` to
+    the query fails.  Cached indefinitely; call load_data.clear() to
     force a fresh read when new rows are detected.
     """
     if not DB_PATH.exists():

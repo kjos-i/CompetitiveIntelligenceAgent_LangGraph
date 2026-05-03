@@ -1,5 +1,5 @@
 """
-Global configuration settings for the Moodgruppen agent.
+Global configuration settings for the CI agent.
 
 All runtime behaviour, model/tool tuning, and debug flags are controlled
 from this single file.  Import the required constants in other modules rather

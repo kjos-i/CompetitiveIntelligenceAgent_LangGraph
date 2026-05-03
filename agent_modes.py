@@ -1,8 +1,8 @@
 """Interactive and automated execution modes for the Moodgruppen agent.
 
 Exposes two top-level coroutines:
-- ``run_manual_chat``  — REPL loop for ad-hoc company research.
-- ``run_automated_lookout`` — batch scan of every company in watchlist.json,
+- run_manual_chat  — REPL loop for ad-hoc company research.
+- run_automated_lookout — batch scan of every company in watchlist.json,
   with an optional follow-up Tavily deep search for significant findings.
 """
 
@@ -30,7 +30,7 @@ async def run_manual_chat():
     """REPL loop for manual, interactive company research.
 
     Prompts the user for a company name, search engine preference, and a free-
-    text research question.  Looks up the last ``HISTORY_LIMIT`` ledger entries
+    text research question.  Looks up the last HISTORY_LIMIT ledger entries
     for that company and injects them as PREVIOUS STATUS context before calling
     the agent.  Results are stored in SQLite after each run.
     """
@@ -77,11 +77,11 @@ async def run_manual_chat():
             print("Invalid engine selection. Please choose 1 or 2.")
             continue
             
-        # Combine tool-routing directive, today's date, user intent, and history
-        # into a single prompt string.  The date anchor lets the model reject
-        # sources older than the configured cutoff.
+        # Combine tool-routing directive, today's date, and user intent into a
+        # lean search query.  History travels via config so sub-agents never see it.
         today = date.today().strftime("%B %d, %Y")
-        query = f"{directive}TODAY: {today}. Research {company}: {user_query}. {history_context}"
+        query = f"{directive}TODAY: {today}. Research {company}: {user_query}."
+        config["configurable"]["history_context"] = history_context
 
         await run_agent(query, config, company=company, engine=engine, mode="manual")
 
@@ -106,7 +106,7 @@ async def run_automated_lookout():
     print(f"∿ Starting automated check on {len(watchlist)} competitors...")
 
     # Default monitoring focus applied to every company unless overridden by
-    # ``special_focus`` in watchlist.json.
+    # special_focus in watchlist.json.
     _default_focus = (
         """Monitor for new product launches in Europe or brand repositioning in Europe.
         Ignore: routine earnings reports and recycled press coverage."""
@@ -134,7 +134,8 @@ async def run_automated_lookout():
                 history_context = "\nPREVIOUS STATUS: No prior data."
 
             today = date.today().strftime("%B %d, %Y")
-            query = f"DIRECTIVE: Use 'brave_scout' only. TODAY: {today}. Check {all_names}. Focus: {company_focus}. {history_context}"
+            query = f"DIRECTIVE: Use 'brave_scout' only. TODAY: {today}. Check {all_names}. Focus: {company_focus}."
+            config["configurable"]["history_context"] = history_context
 
             print(f"\n⌖ [Lookout] Investigating {company_name}...")
             significant_change = await run_agent(query, config, company=company_name, engine="brave_search", mode="auto")

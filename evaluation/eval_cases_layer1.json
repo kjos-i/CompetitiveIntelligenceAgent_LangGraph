@@ -1,0 +1,52 @@
+[
+  {
+    "id": "Brave search result count",
+    "engine": "brave",
+    "query": "Nike new product launches Europe 2026",
+    "expected_min_results": 3,
+    "required_keywords": [],
+    "disallowed_keywords": [],
+    "category": "result_count",
+    "notes": "Checks that Brave returns at least BRAVE_MAX_RESULTS results for a broad, popular query. If result_count < expected_min_results the tool configuration may be returning fewer results than configured."
+  },
+  {
+    "id": "Brave search domain exclusion",
+    "engine": "brave",
+    "query": "Adidas strategy Europe 2026",
+    "expected_min_results": 1,
+    "required_keywords": [],
+    "disallowed_keywords": ["linkedin.com"],
+    "category": "domain_exclusion",
+    "notes": "Checks that linkedin.com (in EXCLUDED_DOMAINS) does not appear in Brave results. The brave_scout prompt explicitly instructs the model to omit excluded domains, so the response text should not reference them."
+  },
+  {
+    "id": "Brave search freshness",
+    "engine": "brave",
+    "query": "Puma brand strategy Europe recent news",
+    "expected_min_results": 1,
+    "required_keywords": [],
+    "disallowed_keywords": [],
+    "category": "freshness",
+    "notes": "Broad freshness check. Verifies the sub-agent returns at least one result for a recent-focused query using the configured BRAVE_FRESHNESS window (pw = past week)."
+  },
+  {
+    "id": "Tavily result count",
+    "engine": "tavily",
+    "query": "Zara new collection Europe 2026",
+    "expected_min_results": 2,
+    "required_keywords": [],
+    "disallowed_keywords": [],
+    "category": "result_count",
+    "notes": "Checks that Tavily returns at least TAVILY_MAX_RESULTS results for a popular brand query. Tavily is configured with search_depth=advanced, so results should be substantive."
+  },
+  {
+    "id": "Tavily domain exclusion",
+    "engine": "tavily",
+    "query": "H&M marketing strategy Europe 2026",
+    "expected_min_results": 1,
+    "required_keywords": [],
+    "disallowed_keywords": ["linkedin.com"],
+    "category": "domain_exclusion",
+    "notes": "Checks that linkedin.com (in EXCLUDED_DOMAINS) is passed to TavilySearch's exclude_domains parameter and does not appear in results."
+  }
+]
