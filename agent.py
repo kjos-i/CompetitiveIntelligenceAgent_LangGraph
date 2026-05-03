@@ -48,7 +48,7 @@ from utils import print_agent_graph, setup_logger
 
 
 # Load environment variables for local development.
-load_dotenv("C:/Users/kjosi/dotenv/.env")
+load_dotenv()
 
 # Configure shared logging and persistence.
 logger = setup_logger(LOGGER_NAME, log_file=Path(__file__).with_name("agent.log"))
